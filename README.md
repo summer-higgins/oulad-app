@@ -1,1 +1,1 @@
-# oulad_mobile_app
+# oulad-app
