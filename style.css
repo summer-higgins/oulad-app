@@ -9,3 +9,9 @@ header, nav, footer {
   padding: 15px;
   text-align: center;
 }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
