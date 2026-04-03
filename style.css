@@ -10,8 +10,24 @@ header, nav, footer {
   text-align: center;
 }
 
-.sidebar {
+.main-content {
+  display: flex;
+  gap: 20px
+  padding: 20px;
+}
+
+.left {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}
+
+.box {
+  padding: 20px;
+  min-height: 100px;
 }
