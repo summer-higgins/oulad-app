@@ -12,14 +12,14 @@ header, nav, footer {
 
 .main-content {
   display: flex;
-  gap: 20px
+  gap: 20px;
   padding: 20px;
 }
 
 .left {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
   width: 30%;
 }
 
