@@ -133,7 +133,60 @@
                                         </ul>
                                     </p> 
                                 </li>
-                                <li></li>
+                                <li>any other attributes list starting here</li>
+                            </ul>
+                        </li>
+                        <li>Student Assessment Information:
+                            <p><strong>To accurately input assessment information, please follow all guidelines listed below.</strong></p>
+                            <ul>
+                                <li>id_assessment
+                                    <p style="text-indent: 20px;">This is the assessment ID corresponding to student interactions in the VLE for a module.<br>
+                                        The current accepted assessment IDs listed:<br>
+                                        <ul>
+                                            <li>1752 - 1756</li>
+                                            <li>1758 - 1762</li>
+                                            <li>14984 – 14989</li>
+                                            <li>14991 – 15001</li>
+                                            <li>15003 – 15013</li>
+                                            <li>15015 – 15024</li>
+                                            <li>24282 – 24299</li>
+                                            <li>25334 – 25368</li>
+                                            <li>30709 – 30712</li>
+                                            <li>30714 – 30717</li>
+                                            <li>30719 – 30722</li>
+                                            <li>34860 – 34871</li>
+                                            <li>34873 – 34884</li>
+                                            <li>34886 – 34897</li>
+                                            <li>34899 – 34910</li>
+                                            <li>37415 – 37423</li>
+                                            <li>37425 – 37433</li>
+                                            <li>37435 – 37443</li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li>date_submitted
+                                    <p style="text-indent: 20px;">This is the date of student submission for the assessment, measured as the number of days since the start of the module presentation.<br>
+                                        Instructions on input calculation:
+                                        <ol>
+                                            <li>Determine start date of module.</li>
+                                            <li>Determine date of the assessment submission.</li>
+                                            <li>Count the number of days from start date to submission date.<br>
+                                            <li>Input value into form.</li>
+                                        </ol>
+                                        <br>
+                                        Example:<br>
+                                        <ul>
+                                            <li>Module begins January 1st, 2026.</li>
+                                            <li>Date submission: January 31st, 2026.</li>
+                                            <li>User submitted the assessment 30 days after the module start date.</li>
+                                            <li>Input: 30</li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li>score
+                                    <p style="text-indent: 20px;">This is the score the student's assessment.<br>
+                                        Accepted values are between 0 and 100.
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -148,7 +201,7 @@
 
                 <!-- STUDENT INPUT FORM -->
                 <form>
-                    <label for="id_student">Student ID:</label>  <!-- fix -->
+                    <label for="id_student">Student ID:</label>
                     <input type="text" id="id_student" name="id_student">
 
                     <p>Gender:</p>
@@ -241,7 +294,18 @@
                     <p>Days since student unregistered from the course:</p>
                     <label for="unregisteredDays">Unregistered Days:</label><br>
                     <input type="text" id="unregisteredDays" name="date_unregistration">
+
+                    <!-- STUDENT ASSESSMENT INFO -->
+                    <!-- students should input this info as accurate as possible -->
+
+                    <label for="assessmentID">Assessment ID:</label>
+                    <input type="text" id="assessmentID" name="assessID">
                     
+                    <label for="submissionDate">Date submitted:</label>
+                    <input type="text" id="submissionDate" name="subDate">
+
+                    <label for="score">Assessment Score:</label>
+                    <input type="text" id="score" name="assessmentScore">
 
 
                     
