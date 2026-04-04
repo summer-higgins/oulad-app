@@ -65,14 +65,14 @@
 
                 <!-- STUDENT INPUT FORM -->
                 <form>
-                    <label for="id_student">Student ID:</label>
-                    <input type="number" id="id_student" name="id_student" min="1" max="10">
+                    <label for="id_student">Student ID:</label>  <!-- fix -->
+                    <input type="text" id="id_student" name="id_student">
 
                     <p>Gender:</p>
                     <input type="radio" id="female" name="gender" value="F">
                     <label for="female">F</label><br>
                     <input type="radio" id="male" name="gender" value="M">
-                    <label for="male">M</label>
+                    <label for="male">M</label><br>
 
                     <label for="region">Region:</label><br>
                     <input type="text" id="region" name="region">
@@ -140,6 +140,18 @@
                     <label for="2014B">2014B</label><br>
                     <input type="radio" id="2014J" name="gender" value="4J">
                     <label for="2014J">2014J</label>
+
+                    <p>Registered days since the start of the module<br>
+                    Please input your value according to these guidelines:<br> <!-- add this inside of guidelines section -->
+                    Input the number of days registered by the module start date. Use '-' before the value if it was before the start date.<br>
+                    Example: Module begins January 1st, 2026.<br>
+                    Date registered: December 2nd, 2025. <br>
+                    User registered for the module 30 days before the start date.<br>
+                    Input: -30 <br>
+                    </p>
+                    <label for="registeredDays">Registered Days:</label><br>
+                    <input type="text" id="registeredDays" name="date_registration">
+                    
 
 
                     
