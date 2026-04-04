@@ -94,7 +94,7 @@
                         <li>Student Registration Information:
                             <ul>
                                 <li>date_registration
-                                    <p style="text-indent: 20px;">This is the student's number of days registered before the module start date.<br>
+                                    <p style="text-indent: 20px;">This is the student's number of days registered by the module start date.<br>
                                         Instructions on input calculation:
                                         <ol>
                                             <li>Determine start date of module.</li>
@@ -103,6 +103,7 @@
                                             If the student registered before the start date, use '-' before the value.</li>
                                             <li>Input value into form.</li>
                                         </ol>
+                                        <br>
                                         Example:<br>
                                         <ul>
                                             <li>Module begins January 1st, 2026.</li>
@@ -112,14 +113,27 @@
                                         </ul>
                                     </p> 
                                 </li>
-                                <li>
-                                    <!--                                       
-                    Input the number of days unregistered by the module start date. Use '-' before the value if it was before the start date.<br>
-                    Example: Module begins January 1st, 2026.<br>
-                    Date unregistered: January 4th, 2025. <br>
-                    User uregistered for the module 3 days after the start date.<br>
-                    Input: 3 <br> -->
+                                <li>date_unregistration
+                                    <p style="text-indent: 20px;">This is the student's number of days unregistered by the module start date.<br>
+                                        Instructions on input calculation:
+                                        <ol>
+                                            <li>Determine start date of module.</li>
+                                            <li>Determine date unregistered for module.</li>
+                                            <li>Count the number of days from unregistered date to start date.<br>
+                                            If the student unregistered before the start date, use '-' before the value.</li>
+                                            <li>Input value into form.</li>
+                                        </ol>
+                                        <br>
+                                        Example:<br>
+                                        <ul>
+                                            <li>Module begins January 1st, 2026.</li>
+                                            <li>Date unregistered: January 4th, 2025.</li>
+                                            <li>User registered for the module 3 days before the start date.</li>
+                                            <li>Input: 3</li>
+                                        </ul>
+                                    </p> 
                                 </li>
+                                <li></li>
                             </ul>
                         </li>
                     </ul>
