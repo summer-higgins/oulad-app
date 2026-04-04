@@ -62,9 +62,90 @@
             <div class="box big">
                 <h2>Add Data Form</h2>
                 <p>In this section, users can input data according to the guideline on the left to insert data into our database. Please fill out the form below in order to add your data.</p>
+
+                <!-- STUDENT INPUT FORM -->
                 <form>
+                    <label for="id_student">Student ID:</label>
+                    <input type="number" id="id_student" name="id_student" min="1" max="10">
+
+                    <p>Gender:</p>
+                    <input type="radio" id="female" name="gender" value="F">
+                    <label for="female">F</label><br>
+                    <input type="radio" id="male" name="gender" value="M">
+                    <label for="male">M</label>
+
+                    <label for="region">Region:</label><br>
+                    <input type="text" id="region" name="region">
+
+                    <p>Highest Education:</p>
+                    <input type="radio" id="HEQual" name="Education" value="HE">
+                    <label for="HEQual">HE Qualification</label><br>
+                    <input type="radio" id="AboveALvl" name="Education" value="AboveA">
+                    <label for="AboveALvl">A Level or Equivalent</label><br>
+                    <input type="radio" id="BelowALvl" name="Education" value="BelowA">
+                    <label for="BelowALvl">Lower Than A Level</label><br>
+                    <input type="radio" id="PostGrad" name="Education" value="PostGQual">
+                    <label for="PostGrad">Post Graduate Qualification</label><br>
+                    <input type="radio" id="NoQual" name="Education" value="NoFQual">
+                    <label for="NoQual">No Formal quals</label>
+
+                    <!-- imd_band -->
+
+                    <!-- age_band -->
+                    <p>Age:</p>
+                    <input type="radio" id="under35" name="age" value="under35">
+                    <label for="under35">0-35</label><br>
+                    <input type="radio" id="35to55" name="age" value="35to55">
+                    <label for="35to55">35-55</label><br>
+                    <input type="radio" id="over55" name="age" value="over55">
+                    <label for="over55">55<=</label>
+
+                    <!-- num_of_prev_attempts -->
+
+                    <!-- studied_credits -->
+
+                    <!-- disability -->
+                    <p>Disability:</p>
+                    <input type="radio" id="yes" name="disability" value="Y">
+                    <label for="yes">Y</label><br>
+                    <input type="radio" id="no" name="disability" value="N">
+                    <label for="no">N</label>
+
+                    <!-- final_result -->
+
+                    <!-- STUDENT MODULE REGISTRATION INFO -->
+                    
+                    <p>Code Module:</p>
+                    <input type="radio" id="aaa" name="codeMod" value="A">
+                    <label for="aaa">AAA</label><br>
+                    <input type="radio" id="bbb" name="codeMod" value="B">
+                    <label for="bbb">BBB</label><br>
+                    <input type="radio" id="ccc" name="codeMod" value="C">
+                    <label for="ccc">CCC</label><br>
+                    <input type="radio" id="ddd" name="codeMod" value="D">
+                    <label for="ddd">DDD</label><br>
+                    <input type="radio" id="eee" name="codeMod" value="E">
+                    <label for="eee">EEE</label><br>
+                    <input type="radio" id="fff" name="codeMod" value="F">
+                    <label for="fff">FFF</label><br>
+                    <input type="radio" id="ggg" name="codeMod" value="G">
+                    <label for="ggg">GGG</label>
+
+                    <p>Code Presentation:</p>
+                    <input type="radio" id="2013B" name="gender" value="3B">
+                    <label for="2013B">2013B</label><br>
+                    <input type="radio" id="2013J" name="gender" value="3J">
+                    <label for="2013J">2013J</label><br>
+                    <input type="radio" id="2014B" name="gender" value="4B">
+                    <label for="2014B">2014B</label><br>
+                    <input type="radio" id="2014J" name="gender" value="4J">
+                    <label for="2014J">2014J</label>
+
+
+                    
                     
                 </form>
+                
             </div>
         </div>
     </div>
