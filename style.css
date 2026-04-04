@@ -19,6 +19,7 @@ header, nav, footer {
 .left {
   display: flex;
   flex-direction: column;
+  border-style: solid;
   gap: 40px;
   width: 50%;
 }
