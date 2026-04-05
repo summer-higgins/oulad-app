@@ -33,7 +33,8 @@
                 </div>
                 <div class="box">
                     <h3>Accepted user Input</h3>
-                    <p>include here a description of all data allowed + explanations of accepted input</p>
+                    <p>The descriptions below list all available input. We advise that you read carefully and follow all instructions to ensure 
+                    accurate data entry.</p>
 
                     <!-- grouping based off tables -->
                     <ul>
@@ -50,7 +51,7 @@
                                     </p>
                                 </li>
                                 <li>region
-                                    <p style="text-indent: 20px;">This is your geographic region during the time you took the module-presentation.<br>
+                                    <p style="text-indent: 20px;">This is the student's geographic region during the time they took the module-presentation.<br>
                                     Accepted values are: any valid lettered input.
                                     </p>
                                 </li>
@@ -60,8 +61,8 @@
                                     </p>
                                 </li>
                                 <li>imd_band
-                                    <p style="text-indent: 20px;">UNKNOWN.<br>
-                                    Accepted values are:
+                                    <p style="text-indent: 20px;">This is a representation of how wealthy or disadvantaged the area the student lives in is.<br>
+                                    Accepted values are listed within the form.
                                     </p>
                                 </li>
                                 <li>age_band
@@ -214,101 +215,106 @@
                     <input type="text" id="region" name="region">
 
                     <p>Highest Education:</p>
-                    <input type="radio" id="HEQual" name="Education" value="HE">
+                    <input type="radio" id="HEQual" name="highest_education" value="HE">
                     <label for="HEQual">HE Qualification</label><br>
-                    <input type="radio" id="AboveALvl" name="Education" value="AboveA">
+                    <input type="radio" id="AboveALvl" name="highest_education" value="AboveA">
                     <label for="AboveALvl">A Level or Equivalent</label><br>
-                    <input type="radio" id="BelowALvl" name="Education" value="BelowA">
+                    <input type="radio" id="BelowALvl" name="highest_education" value="BelowA">
                     <label for="BelowALvl">Lower Than A Level</label><br>
-                    <input type="radio" id="PostGrad" name="Education" value="PostGQual">
+                    <input type="radio" id="PostGrad" name="highest_education" value="PostGQual">
                     <label for="PostGrad">Post Graduate Qualification</label><br>
-                    <input type="radio" id="NoQual" name="Education" value="NoFQual">
+                    <input type="radio" id="NoQual" name="highest_education" value="NoFQual">
                     <label for="NoQual">No Formal quals</label>
 
-                    <!-- imd_band -->
+                    <select name="imd_band">
+                      <option value="0-10%">0-10%</option>
+                      <option value="10-20%">10-20%</option>
+                      <option value="20-30%">20-30%</option>
+                      <option value="30-40%">30-40%</option>
+                      <option value="40-50%">40-50%</option>
+                      <option value="50-60%">50-60%</option>
+                      <option value="60-70%">60-70%</option>
+                      <option value="70-80%">70-80%</option>
+                      <option value="80-90%">80-90%</option>
+                      <option value="90-100%">90-100%</option>
+                      <option value="NULL">Unknown</option>
+                    </select>
 
-                    <!-- age_band -->
                     <p>Age:</p>
-                    <input type="radio" id="under35" name="age" value="under35">
+                    <input type="radio" id="under35" name="age_band" value="under35">
                     <label for="under35">0-35</label><br>
-                    <input type="radio" id="35to55" name="age" value="35to55">
+                    <input type="radio" id="35to55" name="age_band" value="35to55">
                     <label for="35to55">35-55</label><br>
-                    <input type="radio" id="over55" name="age" value="over55">
+                    <input type="radio" id="over55" name="age_band" value="over55">
                     <label for="over55">55<=</label>
 
-                    <!-- num_of_prev_attempts -->
+                    <label for="num_of_prev_attempts">Number of Previous Attempts:</label>
+                    <input type="text" id="num_of_prev_attempts" name="num_of_prev_attempts"><br>
 
-                    <!-- studied_credits -->
+                    <label for="studiedCredits">Studied Credits:</label>
+                    <input type="text" id="studiedCredits" name="studied_credits"><br>
 
-                    <!-- disability -->
                     <p>Disability:</p>
                     <input type="radio" id="yes" name="disability" value="Y">
                     <label for="yes">Y</label><br>
                     <input type="radio" id="no" name="disability" value="N">
-                    <label for="no">N</label>
+                    <label for="no">N</label><br>
 
-                    <!-- final_result -->
-                    <p>Code Presentation:</p>
-                    <input type="radio" id="pass" name="gender" value="P">
+                    <p>Final Result:</p>
+                    <input type="radio" id="pass" name="final_result" value="P">
                     <label for="pass">Pass</label><br>
-                    <input type="radio" id="withdrawn" name="gender" value="W">
+                    <input type="radio" id="withdrawn" name="final_result" value="W">
                     <label for="withdrawn">Withdrawn</label><br>
-                    <input type="radio" id="fail" name="gender" value="F">
+                    <input type="radio" id="fail" name="final_result" value="F">
                     <label for="fail">Fail</label><br>
-                    <input type="radio" id="distinction" name="gender" value="D">
+                    <input type="radio" id="distinction" name="final_result" value="D">
                     <label for="distinction">Distinction</label>
 
                     <!-- STUDENT MODULE REGISTRATION INFO -->
                     
                     <p>Code Module:</p>
-                    <input type="radio" id="aaa" name="codeMod" value="A">
+                    <input type="radio" id="aaa" name="code_module" value="A">
                     <label for="aaa">AAA</label><br>
-                    <input type="radio" id="bbb" name="codeMod" value="B">
+                    <input type="radio" id="bbb" name="code_module" value="B">
                     <label for="bbb">BBB</label><br>
-                    <input type="radio" id="ccc" name="codeMod" value="C">
+                    <input type="radio" id="ccc" name="code_module" value="C">
                     <label for="ccc">CCC</label><br>
-                    <input type="radio" id="ddd" name="codeMod" value="D">
+                    <input type="radio" id="ddd" name="code_module" value="D">
                     <label for="ddd">DDD</label><br>
-                    <input type="radio" id="eee" name="codeMod" value="E">
+                    <input type="radio" id="eee" name="code_module" value="E">
                     <label for="eee">EEE</label><br>
-                    <input type="radio" id="fff" name="codeMod" value="F">
+                    <input type="radio" id="fff" name="code_module" value="F">
                     <label for="fff">FFF</label><br>
-                    <input type="radio" id="ggg" name="codeMod" value="G">
+                    <input type="radio" id="ggg" name="code_module" value="G">
                     <label for="ggg">GGG</label>
 
                     <p>Code Presentation:</p>
-                    <input type="radio" id="2013B" name="gender" value="3B">
+                    <input type="radio" id="2013B" name="code_presentation" value="3B">
                     <label for="2013B">2013B</label><br>
-                    <input type="radio" id="2013J" name="gender" value="3J">
+                    <input type="radio" id="2013J" name="code_presentation" value="3J">
                     <label for="2013J">2013J</label><br>
-                    <input type="radio" id="2014B" name="gender" value="4B">
+                    <input type="radio" id="2014B" name="code_presentation" value="4B">
                     <label for="2014B">2014B</label><br>
-                    <input type="radio" id="2014J" name="gender" value="4J">
+                    <input type="radio" id="2014J" name="code_presentation" value="4J">
                     <label for="2014J">2014J</label>
 
-                    <p>Registered days since the start of the module:<br>
-                    </p>
-                    <label for="registeredDays">Registered Days:</label><br>
-                    <input type="text" id="registeredDays" name="date_registration">
+                    <label for="registeredDays">Registered Days:</label>
+                    <input type="text" id="registeredDays" name="date_registration"><br>
 
-                    <p>Days since student unregistered from the course:</p>
                     <label for="unregisteredDays">Unregistered Days:</label>
                     <input type="text" id="unregisteredDays" name="date_unregistration"><br>
 
                     <!-- STUDENT ASSESSMENT INFO -->
-                    <!-- students should input this info as accurate as possible -->
 
                     <label for="assessmentID">Assessment ID:</label>
-                    <input type="text" id="assessmentID" name="assessID"><br>
+                    <input type="text" id="id_assessment" name="assessID"><br>
                     
                     <label for="submissionDate">Date submitted:</label>
-                    <input type="text" id="submissionDate" name="subDate"><br>
+                    <input type="text" id="date_submitted" name="subDate"><br>
 
                     <label for="score">Assessment Score:</label>
-                    <input type="text" id="score" name="assessmentScore"><br>
+                    <input type="text" id="score" name="score"><br>
 
-
-                    
                     
                 </form>
                 
