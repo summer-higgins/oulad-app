@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Data - OULAD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>OULAD Student Engagement Analytics</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add Data</a>
+        <a href="delete.html">Delete Data</a>
+        <a href="update.html">Update Data</a>
+        <a href="summary.html">Summary </a>
+        <a href="docs.html">Documentation</a>
+    </nav>
+    <main>
+        <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
+        <p>This dashboard provides insights into student engagement based on the OULAD dataset. You can add, delete, and update student data, as well as view summaries and documentation about the dataset.</p>
+        <p>Use the navigation links above to explore the different functionalities of the dashboard.</p>
+    </main>
+
+    <div class="main-content">
+        <div class="left">
+                <div class="box">
+                    <h3>Delete Data Description</h3>
+                    <p>In this webpage, students are allowed to delete data from the OULAD database. In the section below includes a description of accepted user input.
+                    </p>
+                </div>
+                <div class="box">
+                    <h3>Accepted User Input</h3>
+                    <p>include here a description of all data allowed + explanations of accepted input</p>
+
+                    <!-- grouping based off tables -->
+                    <ul>
+                        <li>Student Information:
+                            <ul>
+                                <li>id_student
+                                    <p style="text-indent: 20px;">This is the student ID.<br>
+                                    Accepted values are: numbers.
+                                    </p>
+                                </li>
+                                <li>gender
+                                    <p style="text-indent: 20px;">This is the student's gender.<br>
+                                    Accepted values are listed within the form.
+                                    </p>
+                                </li>
+                                <li>region
+                                    <p style="text-indent: 20px;">This is your geographic region during the time you took the module-presentation.<br>
+                                    Accepted values are: any valid lettered input.
+                                    </p>
+                                </li>
+                                <li>highest_education
+                                    <p style="text-indent: 20px;">This is the highest student education level on entry to the module presentation.<br>
+                                    Accepted values are listed within the form.
+                                    </p>
+                                </li>
+                                <li>imd_band
+                                    <p style="text-indent: 20px;">UNKNOWN.<br>
+                                    Accepted values are:
+                                    </p>
+                                </li>
+                                <li>age_band
+                                    <p style="text-indent: 20px;">This is the band of the student's age.<br>
+                                    Accepted values are listed within the form.
+                                    </p>
+                                </li>
+                                <li>num_of_prev_attempts
+                                    <p style="text-indent: 20px;">This is the number of times the student has attempted a module.<br>
+                                    Accepted values are listed within the form.
+                                    </p>
+                                </li>
+                                <li>studied_credits
+                                    <p style="text-indent: 20px;">This is the total number of credits for the module the student is currently studying.<br>
+                                    Accepted values are listed within the form.
+                                    </p>
+                                </li>
+                                <li>disability
+                                    <p style="text-indent: 20px;">This is an indication of student disability.<br>
+                                    Accepted values are listed within the form.
+                                    </p>
+                                </li>
+                                <li>final_result
+                                    <p style="text-indent: 20px;">This is the student's final result in the module-presentation.<br>
+                                    Accepted values are listed within the form.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Student Registration Information:
+                            <ul>
+                                <li>date_registration
+                                    <p style="text-indent: 20px;">This is the student's number of days registered by the module start date.<br>
+                                        Instructions on input calculation:
+                                        <ol>
+                                            <li>Determine start date of module.</li>
+                                            <li>Determine date registered for module.</li>
+                                            <li>Count the number of days from registered date to start date.<br>
+                                            If the student registered before the start date, use '-' before the value.</li>
+                                            <li>Input value into form.</li>
+                                        </ol>
+                                        <br>
+                                        Example:<br>
+                                        <ul>
+                                            <li>Module begins January 1st, 2026.</li>
+                                            <li>Date registered: December 2nd, 2025.</li>
+                                            <li>User registered for the module 30 days before the start date.</li>
+                                            <li>Input: -30</li>
+                                        </ul>
+                                    </p> 
+                                </li>
+                                <li>date_unregistration
+                                    <p style="text-indent: 20px;">This is the student's number of days unregistered by the module start date.<br>
+                                        Instructions on input calculation:
+                                        <ol>
+                                            <li>Determine start date of module.</li>
+                                            <li>Determine date unregistered for module.</li>
+                                            <li>Count the number of days from unregistered date to start date.<br>
+                                            If the student unregistered before the start date, use '-' before the value.</li>
+                                            <li>Input value into form.</li>
+                                        </ol>
+                                        <br>
+                                        Example:<br>
+                                        <ul>
+                                            <li>Module begins January 1st, 2026.</li>
+                                            <li>Date unregistered: January 4th, 2026.</li>
+                                            <li>User registered for the module 3 days before the start date.</li>
+                                            <li>Input: 3</li>
+                                        </ul>
+                                    </p> 
+                                </li>
+                                <li>any other attributes list starting here</li>
+                            </ul>
+                        </li>
+                        <li>Student Assessment Information:
+                            <p><strong>To accurately input assessment information, please follow all guidelines listed below.</strong></p>
+                            <ul>
+                                <li>id_assessment
+                                    <p style="text-indent: 20px;">This is the assessment ID corresponding to student interactions in the VLE for a module.<br>
+                                        The current accepted assessment IDs listed in their ranges:<br>
+                                        <ul>
+                                            <li>1752 – 1756</li>
+                                            <li>1758 – 1762</li>
+                                            <li>14984 – 14989</li>
+                                            <li>14991 – 15001</li>
+                                            <li>15003 – 15013</li>
+                                            <li>15015 – 15024</li>
+                                            <li>24282 – 24299</li>
+                                            <li>25334 – 25368</li>
+                                            <li>30709 – 30712</li>
+                                            <li>30714 – 30717</li>
+                                            <li>30719 – 30722</li>
+                                            <li>34860 – 34871</li>
+                                            <li>34873 – 34884</li>
+                                            <li>34886 – 34897</li>
+                                            <li>34899 – 34910</li>
+                                            <li>37415 – 37423</li>
+                                            <li>37425 – 37433</li>
+                                            <li>37435 – 37443</li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li>date_submitted
+                                    <p style="text-indent: 20px;">This is the date of student submission for the assessment, measured as the number of days since the start of the module presentation.<br>
+                                        Instructions on input calculation:
+                                        <ol>
+                                            <li>Determine start date of module.</li>
+                                            <li>Determine date of the assessment submission.</li>
+                                            <li>Count the number of days from start date to submission date.<br>
+                                            <li>Input value into form.</li>
+                                        </ol>
+                                        <br>
+                                        Example:<br>
+                                        <ul>
+                                            <li>Module begins January 1st, 2026.</li>
+                                            <li>Date submission: January 31st, 2026.</li>
+                                            <li>User submitted the assessment 30 days after the module start date.</li>
+                                            <li>Input: 30</li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li>score
+                                    <p style="text-indent: 20px;">This is the score the student's assessment.<br>
+                                        Accepted values are between 0 and 100.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+        </div>
+
+        <div class="right">
+            <div class="box big">
+                <h2>Delete Data Form</h2>
+                <p>In this section, users can delete data according to the guideline to the left. Please fill out the form below in order to delete your requested data.</p>
+
+                <!-- users can edit studentInfo, studentRegistration, studentAssessment, studentClicks, weeklyClicks, activityTypeClicks
+
+                <!-- STUDENT INPUT FORM -->
+                <div class="small box">
+                  <h3>Delete Student Info</h3>
+                  <form>
+                    <label for="id_student">Student ID:</label>
+                    <input type="text" id="id_student" name="id_student" required>
+
+                    <label for="code_module">Code Module:</label>
+                    <input type="text" id="code_module" name="code_module" required>
+
+                    <label for="code_presentation">Code Presentation:</label>
+                    <input type="text" id="code_presentation" name="code_presentation" required>
+
+                    <button type="submit">Delete Student Info</button>
+                  </form>
+                </div>
+
+                <div class="small box">
+                  <h3>Delete Registration Info</h3>
+                  <form>
+                    <label for="id_student">Student ID:</label>
+                    <input type="text" id="id_student" name="id_student" required>
+
+                    <label for="code_module">Code Module:</label>
+                    <input type="text" id="code_module" name="code_module" required>
+
+                    <label for="code_presentation">Code Presentation:</label>
+                    <input type="text" id="code_presentation" name="code_presentation" required>
+
+                    <button type="submit">Delete Registration Info</button>
+                  </form>
+                </div>
+
+                <div class="small box">
+                  <h3>Delete Student Assessment Info</h3>
+                  <form>
+                    <label for="id_student">Student ID:</label>
+                    <input type="text" id="id_student" name="id_student" required>
+
+                    <label for="id_assessment">Assessment ID:</label>
+                    <input type="text" id="id_assessment" name="id_assessment" required>
+                    
+                    <button type="submit">Delete Student Assessment Info</button>
+                  </form>
+                </div>
+
+                <div class="small box">
+                  <h3>Delete Total Clicks Info</h3>
+                  <form>
+                    <label for="id_student">Student ID:</label>
+                    <input type="text" id="id_student" name="id_student" required>
+
+                    <label for="code_module">Code Module:</label>
+                    <input type="text" id="code_module" name="code_module" required>
+
+                    <label for="code_presentation">Code Presentation:</label>
+                    <input type="text" id="code_presentation" name="code_presentation" required>
+                    
+                    <button type="submit">Delete Total Clicks Info</button>
+                  </form>
+                </div>
+
+                <div class="small box">
+                  <h3>Delete Weekly Clicks Info</h3>
+                  <form>
+                    <label for="id_student">Student ID:</label>
+                    <input type="text" id="id_student" name="id_student" required>
+
+                    <label for="code_module">Code Module:</label>
+                    <input type="text" id="code_module" name="code_module" required>
+
+                    <label for="code_presentation">Code Presentation:</label>
+                    <input type="text" id="code_presentation" name="code_presentation" required>
+
+                    <label for="week">Week:</label>
+                    <input type="text" id="week" name="week" required>
+                    
+                    <button type="submit">Delete Weekly Clicks Info</button>
+                  </form>
+                </div>
+
+              <div class="small box">
+                  <h3>Delete Activity Types Clicks Info</h3>
+                  <form>
+                    <label for="id_student">Student ID:</label>
+                    <input type="text" id="id_student" name="id_student" required>
+
+                    <label for="code_module">Code Module:</label>
+                    <input type="text" id="code_module" name="code_module" required>
+
+                    <label for="code_presentation">Code Presentation:</label>
+                    <input type="text" id="code_presentation" name="code_presentation" required>
+
+                    <label for="activity_type">Activity Type:</label>
+                    <input type="text" id="activity_type" name="activity_type" required>
+                    
+                    <button type="submit">Delete Activity Type Info</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer>
+        <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
