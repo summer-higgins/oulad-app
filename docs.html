@@ -3,60 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OULAD Student Engagement Analytics</title>
+    <title>Documentation - OULAD</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>OULAD Student Engagement Analytics</h1>
     </header>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="add.html">Add Data</a>
         <a href="delete.html">Delete Data</a>
         <a href="update.html">Update Data</a>
-        <a href="summary.html">Summary </a>
+        <a href="summary.html">Summary</a>
         <a href="docs.html">Documentation</a>
     </nav>
+
     <main>
         <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
-        <p>This dashboard provides insights into student engagement based on the OULAD dataset. You can add, delete, and update student data, as well as view summaries and documentation about the dataset.</p>
-        <p>Use the navigation links above to explore the different functionalities of the dashboard.</p>
+        <p>This webpage provides documentation for the application, including project information, requirements, setup instructions, and a user guide for each webpage.</p>
+        <p>It is intended to help users understand the purpose of the application and how the interface is organized.</p>
     </main>
 
     <div class="main-content">
         <div class="left">
-                <div class="box">
-                    <h3>Project Overview</h3>
-                    <p>The purpose of this application is to provide a simple way for users to store, query, and analyze student performance and engagement data from 
-                        online courses. The app helps users understand how factors such as student background, registration behavior, assessment performance, and 
-                        VLE activity may influence academic outcomes.<br>
-                        <strong>App name: </strong>OULAD Analytics<br>
-                        <strong>Design & Development Team: </strong>Elma Okanovic and Summer Higgins<br>
-                    </p>
-                </div>
-                <div class="box">
-                    <h3>System Requirements</h3>
-                    <p>
-                        <strong>Hardware: </strong> Minimum 8GB RAM, 16GB Available Disk Space<br>
-                        <strong>Software: </strong> PostgreSQL, Local server<br>
-                    </p>
-                </div>
+            <div class="box">
+                <h3>Project Overview</h3>
+                <p>The purpose of this application is to provide a simple way for users to store, query, and analyze student performance and engagement data from online courses. The app helps users understand how factors such as student background, registration behavior, assessment performance, and VLE activity may influence academic outcomes.</p>
+            </div>
+
+            <div class="box">
+                <h3>App and Team Information</h3>
+                <p><strong>App Name:</strong> OULAD Analytics</p>
+                <p><strong>Design & Development Team:</strong> Elma Okanovic and Summer Higgins</p>
+                <p><strong>Project Type:</strong> Web-based database application interface</p>
+                <p><strong>Web URL:</strong> Local prototype for course submission</p>
+            </div>
+
+            <div class="box">
+                <h3>System Requirements</h3>
+                <p><strong>Hardware Requirements:</strong> Minimum 8 GB RAM, minimum 16 GB available disk space</p>
+                <p><strong>Software Requirements:</strong> PostgreSQL, pgAdmin, local server or browser-based HTML preview, and a modern web browser</p>
+            </div>
         </div>
 
         <div class="right">
             <div class="box big">
-                <h2>Setup Guideline:</h2>
-                <p>
-                    To install our database into your set, please use our backup database download listed below.<br>
-                    <!--- Insert link if needed -->
+                <h2>Setup Instructions</h2>
+                <ol>
+                    <li>Install PostgreSQL and pgAdmin on your computer.</li>
+                    <li>Create or restore the OULAD database in PostgreSQL.</li>
+                    <li>Ensure the required tables for the project are available in the database.</li>
+                    <li>Place all HTML files and the stylesheet in one main project folder.</li>
+                    <li>Open the folder in Visual Studio Code or another editor.</li>
+                    <li>Launch the interface locally by opening <strong>index.html</strong> or by using a local server such as Live Server.</li>
+                </ol>
 
-                </p>
+                <div class="section-space"></div>
+
+                <h2>Commands / Instructions for Running the Project</h2>
+                <p>This interface is currently a front-end prototype for the project design stage. It can be viewed locally in one of the following ways:</p>
+                <ul>
+                    <li>Open <strong>index.html</strong> directly in a web browser.</li>
+                    <li>Open the folder in Visual Studio Code and run the project using a local server extension such as Live Server.</li>
+                    <li>Use PostgreSQL and pgAdmin separately to manage the database backend during the implementation stage.</li>
+                </ul>
+
+                <div class="section-space"></div>
+
+                <h2>User Guide</h2>
+
+                <h3>Home Page</h3>
+                <p>The main webpage introduces the application, explains the project purpose, and provides information about the OULAD dataset and its tables.</p>
+
+                <h3>Add Data Page</h3>
+                <p>The add page allows users to enter new values into the database through a form. It also explains the accepted input and how the form is organized.</p>
+
+                <h3>Delete Data Page</h3>
+                <p>The delete page allows users to remove records from selected tables. To reduce mistakes, the form is organized around primary keys and composite keys.</p>
+
+                <h3>Update Data Page</h3>
+                <p>The update page allows users to identify an existing record and enter replacement values for the fields that should be changed.</p>
+
+                <h3>Summary Page</h3>
+                <p>The summary page presents a prototype layout for summarized outputs, charts, and grouped project information that can be generated from the database.</p>
+
+                <h3>Documentation Page</h3>
+                <p>The documentation page provides setup instructions, system requirements, project information, and a guide to help the user understand how to use the interface.</p>
+
+                <div class="note">
+                    <strong>Note:</strong> Database logic, server-side processing, and live query execution will be implemented in the next stage of project.
+                </div>
             </div>
         </div>
     </div>
-    
-    
+
     <footer>
         <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
     </footer>

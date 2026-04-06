@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data - OULAD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>OULAD Student Engagement Analytics</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add Data</a>
+        <a href="delete.html">Delete Data</a>
+        <a href="update.html">Update Data</a>
+        <a href="summary.html">Summary</a>
+        <a href="docs.html">Documentation</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
+        <p>This webpage allows users to identify an existing record and enter revised values for that record.</p>
+        <p>This page is part of the interface design and shows how update actions will be organized in the completed database application.</p>
+    </main>
+
+    <div class="main-content">
+        <div class="left">
+            <div class="box">
+                <h3>Update Data Description</h3>
+                <p>In this webpage, users are allowed to update existing data in the OULAD database. The user must first identify a specific record by its primary key or composite key, then enter the new value or values that should replace the existing data.</p>
+            </div>
+
+            <div class="box">
+                <h3>Accepted User Input</h3>
+                <p>The update forms are organized by table. Users should first enter the key fields that identify the record, then enter only the values they want to change.</p>
+                <ul>
+                    <li><strong>Student Info</strong> uses the student and module-presentation record to identify a row.</li>
+                    <li><strong>Registration Info</strong> updates registration and unregistration day values for a student record.</li>
+                    <li><strong>Student Assessment Info</strong> updates assessment submission details and score for a selected assessment record.</li>
+                    <li><strong>Total Clicks Info</strong> updates the stored total click count for a student record.</li>
+                    <li><strong>Weekly Clicks Info</strong> updates click totals for a specific student and week.</li>
+                    <li><strong>Activity Type Clicks Info</strong> updates click totals for a specific student and activity type.</li>
+                </ul>
+
+                <div class="note">
+                    <strong>Guideline:</strong> For this design stage, the forms below demonstrate the intended webpage structure and input organization. Backend update logic will be connected in the implementation stage.
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="box big">
+                <h2>Update Data Form</h2>
+                <p>Use the sections below to identify the record you want to update and enter the replacement value or values.</p>
+
+                <div class="small box">
+                    <h3>Update Student Info</h3>
+                    <form>
+                        <label for="u_id_student_1">Student ID:</label>
+                        <input type="text" id="u_id_student_1" name="id_student" required>
+
+                        <label for="u_code_module_1">Code Module:</label>
+                        <input type="text" id="u_code_module_1" name="code_module" required>
+
+                        <label for="u_code_presentation_1">Code Presentation:</label>
+                        <input type="text" id="u_code_presentation_1" name="code_presentation" required>
+
+                        <label for="u_region">New Region:</label>
+                        <input type="text" id="u_region" name="region">
+
+                        <label for="u_studied_credits">New Studied Credits:</label>
+                        <input type="text" id="u_studied_credits" name="studied_credits">
+
+                        <label for="u_final_result">New Final Result:</label>
+                        <input type="text" id="u_final_result" name="final_result">
+
+                        <button type="submit">Update Student Info</button>
+                    </form>
+                </div>
+
+                <div class="small box">
+                    <h3>Update Registration Info</h3>
+                    <form>
+                        <label for="u_id_student_2">Student ID:</label>
+                        <input type="text" id="u_id_student_2" name="id_student" required>
+
+                        <label for="u_code_module_2">Code Module:</label>
+                        <input type="text" id="u_code_module_2" name="code_module" required>
+
+                        <label for="u_code_presentation_2">Code Presentation:</label>
+                        <input type="text" id="u_code_presentation_2" name="code_presentation" required>
+
+                        <label for="u_date_registration">New Registration Days:</label>
+                        <input type="text" id="u_date_registration" name="date_registration">
+
+                        <label for="u_date_unregistration">New Unregistration Days:</label>
+                        <input type="text" id="u_date_unregistration" name="date_unregistration">
+
+                        <button type="submit">Update Registration Info</button>
+                    </form>
+                </div>
+
+                <div class="small box">
+                    <h3>Update Student Assessment Info</h3>
+                    <form>
+                        <label for="u_id_student_3">Student ID:</label>
+                        <input type="text" id="u_id_student_3" name="id_student" required>
+
+                        <label for="u_id_assessment">Assessment ID:</label>
+                        <input type="text" id="u_id_assessment" name="id_assessment" required>
+
+                        <label for="u_date_submitted">New Date Submitted:</label>
+                        <input type="text" id="u_date_submitted" name="date_submitted">
+
+                        <label for="u_score">New Score:</label>
+                        <input type="text" id="u_score" name="score">
+
+                        <button type="submit">Update Assessment Info</button>
+                    </form>
+                </div>
+
+                <div class="small box">
+                    <h3>Update Total Clicks Info</h3>
+                    <form>
+                        <label for="u_id_student_4">Student ID:</label>
+                        <input type="text" id="u_id_student_4" name="id_student" required>
+
+                        <label for="u_code_module_4">Code Module:</label>
+                        <input type="text" id="u_code_module_4" name="code_module" required>
+
+                        <label for="u_code_presentation_4">Code Presentation:</label>
+                        <input type="text" id="u_code_presentation_4" name="code_presentation" required>
+
+                        <label for="u_total_clicks">New Total Clicks:</label>
+                        <input type="text" id="u_total_clicks" name="sum_click">
+
+                        <button type="submit">Update Total Clicks Info</button>
+                    </form>
+                </div>
+
+                <div class="small box">
+                    <h3>Update Weekly Clicks Info</h3>
+                    <form>
+                        <label for="u_id_student_5">Student ID:</label>
+                        <input type="text" id="u_id_student_5" name="id_student" required>
+
+                        <label for="u_code_module_5">Code Module:</label>
+                        <input type="text" id="u_code_module_5" name="code_module" required>
+
+                        <label for="u_code_presentation_5">Code Presentation:</label>
+                        <input type="text" id="u_code_presentation_5" name="code_presentation" required>
+
+                        <label for="u_week">Week:</label>
+                        <input type="text" id="u_week" name="week" required>
+
+                        <label for="u_weekly_clicks">New Weekly Clicks:</label>
+                        <input type="text" id="u_weekly_clicks" name="clicks">
+
+                        <button type="submit">Update Weekly Clicks Info</button>
+                    </form>
+                </div>
+
+                <div class="small box">
+                    <h3>Update Activity Type Clicks Info</h3>
+                    <form>
+                        <label for="u_id_student_6">Student ID:</label>
+                        <input type="text" id="u_id_student_6" name="id_student" required>
+
+                        <label for="u_code_module_6">Code Module:</label>
+                        <input type="text" id="u_code_module_6" name="code_module" required>
+
+                        <label for="u_code_presentation_6">Code Presentation:</label>
+                        <input type="text" id="u_code_presentation_6" name="code_presentation" required>
+
+                        <label for="u_activity_type">Activity Type:</label>
+                        <input type="text" id="u_activity_type" name="activity_type" required>
+
+                        <label for="u_activity_clicks">New Activity Type Clicks:</label>
+                        <input type="text" id="u_activity_clicks" name="clicks">
+
+                        <button type="submit">Update Activity Type Clicks Info</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
+    </footer>
+</body>
+</html>

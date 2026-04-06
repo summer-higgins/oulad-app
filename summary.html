@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary - OULAD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>OULAD Student Engagement Analytics</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add Data</a>
+        <a href="delete.html">Delete Data</a>
+        <a href="update.html">Update Data</a>
+        <a href="summary.html">Summary</a>
+        <a href="docs.html">Documentation</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
+        <p>This webpage presents a summarized view of the database application and the kinds of analytics the system is designed to display.</p>
+        <p>For this interface phase, the content below is a front-end summary layout that shows how results and charts would be organized in the full project.</p>
+    </main>
+
+    <div class="main-content">
+        <div class="left">
+            <div class="box">
+                <h3>Summary Page Description</h3>
+                <p>This webpage is designed to display summarized information extracted from the database. It brings together high-level project information and prototype visual panels that show how engagement data can be presented to the user.</p>
+            </div>
+
+            <div class="box">
+                <h3>Summary Notes</h3>
+                <ul>
+                    <li>This page is a static prototype for the Task 3 interface.</li>
+                    <li>The layout demonstrates how charts, counts, and grouped information can appear in the final application.</li>
+                    <li>The final version of the project can connect these panels to real SQL queries and database outputs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="box big">
+                <h2>Database Snapshot</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Tables</h3>
+                        <p>9</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Derived Click Tables</h3>
+                        <p>3</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Core Data Actions</h3>
+                        <p>Add / Delete / Update</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Interface Pages</h3>
+                        <p>6</p>
+                    </div>
+                </div>
+
+                <div class="summary-panel">
+                    <h3>Example Summary Areas</h3>
+                    <div class="bar-row">
+                        <span>Student Results by Module</span>
+                        <div class="bar"><div class="fill fill-one"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Weekly Engagement Trend</span>
+                        <div class="bar"><div class="fill fill-two"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Assessment Participation</span>
+                        <div class="bar"><div class="fill fill-three"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <span>Activity Type Click Distribution</span>
+                        <div class="bar"><div class="fill fill-four"></div></div>
+                    </div>
+                </div>
+
+                <div class="summary-panel">
+                    <h3>Planned Summary Outputs</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Summary Area</th>
+                                <th>Purpose</th>
+                                <th>Possible Source Tables</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Student outcomes</td>
+                                <td>Compare pass, fail, distinction, and withdrawn results</td>
+                                <td>studentInfo</td>
+                            </tr>
+                            <tr>
+                                <td>Registration activity</td>
+                                <td>Review when students register or unregister relative to module start</td>
+                                <td>studentRegistration</td>
+                            </tr>
+                            <tr>
+                                <td>Assessment performance</td>
+                                <td>Summarize submitted work and scores</td>
+                                <td>studentAssessment</td>
+                            </tr>
+                            <tr>
+                                <td>Total engagement</td>
+                                <td>Measure total click activity by student</td>
+                                <td>studentClicks</td>
+                            </tr>
+                            <tr>
+                                <td>Weekly engagement</td>
+                                <td>Track click totals over time</td>
+                                <td>weeklyClicks</td>
+                            </tr>
+                            <tr>
+                                <td>Activity type engagement</td>
+                                <td>Compare which VLE resource types receive the most interaction</td>
+                                <td>activityTypeClicks</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="note">
+                    <strong>Prototype Notice:</strong> The visual panels on this webpage represent the intended summary layout for the completed application. In the full implementation stage, these sections can be connected to SQL queries and live database results.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
+    </footer>
+</body>
+</html>

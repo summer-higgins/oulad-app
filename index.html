@@ -3,81 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OULAD Student Engagement Analytics  </title>
+    <title>OULAD Student Engagement Analytics</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>OULAD Student Engagement Analytics</h1>
     </header>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="add.html">Add Data</a>
         <a href="delete.html">Delete Data</a>
         <a href="update.html">Update Data</a>
-        <a href="summary.html">Summary </a>
+        <a href="summary.html">Summary</a>
         <a href="docs.html">Documentation</a>
     </nav>
+
     <main>
         <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
-        <p>This dashboard provides insights into student engagement based on the OULAD dataset. You can add, delete, and update student data, as well as view summaries and documentation about the dataset.</p>
-        <p>Use the navigation links above to explore the different functionalities of the dashboard.</p>
+        <p>This dashboard provides a web-based interface for working with student engagement and academic performance data from the OULAD dataset.</p>
+        <p>Use the navigation menu above to move between the main webpage, data entry forms, update and delete tools, the summary page, and the documentation webpage.</p>
     </main>
 
     <div class="main-content">
         <div class="left">
-                <div class="box">
-                    <h3>Our Purpose</h3>
-                    <p>The purpose of this application is to provide a simple way for users to store, query, and analyze student performance and engagement data from 
-                        online courses. The app helps users understand how factors such as student background, registration behavior, assessment performance, and 
-                        VLE activity may influence academic outcomes.
-                    </p>
-                </div>
-                <div class="box">
-                    <h3>OULAD Dataset Links</h3>
-                    <a href="https://archive.ics.uci.edu/dataset/349/open+university+learning+analytics+dataset">Open University Learning Analytics Dataset Link 1</a>
-                    <br>
-                    <a href="https://analyse.kmi.open.ac.uk/open-dataset">Open University Learning Analytics Dataset Link 2</a>
-                </div>
+            <div class="box">
+                <h3>Our Purpose</h3>
+                <p>The purpose of this application is to provide a simple way for users to store, query, and analyze student performance and engagement data from online courses. The app helps users understand how factors such as student background, registration behavior, assessment performance, and VLE activity may influence academic outcomes.</p>
+            </div>
+
+            <div class="box">
+                <h3>OULAD Dataset Links</h3>
+                <p><a href="https://archive.ics.uci.edu/dataset/349/open+university+learning+analytics+dataset">Open University Learning Analytics Dataset - UCI Repository</a></p>
+                <p><a href="https://analyse.kmi.open.ac.uk/open-dataset">Open University Learning Analytics Dataset - OU Analyse Website</a></p>
+            </div>
         </div>
 
         <div class="right">
             <div class="box big">
                 <h2>Dataset Information</h2>
-                <p>
-                    The dataset used for this project is the Open University Learning Analytics Dataset (OULAD). We chose this dataset because it is publicly available, 
-                    credible, and already structured in a way that supports relational database storage. It includes linked information about students, courses, 
-                    assessments, registration, and VLE activity, which makes it well suited for a web-based database application focused on student engagement and 
-                    academic performance. 
-                </p>
+                <p>The dataset used for this project is the Open University Learning Analytics Dataset (OULAD). We chose this dataset because it is publicly available, credible, and already structured in a way that supports relational database storage. It includes linked information about students, courses, assessments, registration, and VLE activity, which makes it well suited for a web-based database application focused on student engagement and academic performance.</p>
 
-                <p><strong>Dataset Tables</strong></p>
+                <h3>Dataset Tables</h3>
                 <ul>
-                    <li>courses
-                        <p style="text-indent: 50px;">info about course</p>
-                    </li>
-                    <li>assessments</li>
-                    <li>vle</li>
-                    <li>studentInfo</li>
-                    <li>studentRegistration</li>
-                    <li>studentAssessment</li>
-                    <li>studentClicks</li>
-                    <li>weeklyClicks</li>
-                    <li>activityTypeClicks</li>
+                    <li><strong>courses</strong> - stores module codes, presentation codes, and the length of each module presentation.</li>
+                    <li><strong>assessments</strong> - stores assessment identifiers, module information, assessment type, due date, and assessment weight.</li>
+                    <li><strong>vle</strong> - stores information about materials and resources available in the virtual learning environment.</li>
+                    <li><strong>studentInfo</strong> - stores student demographic information, prior attempts, credits studied, disability status, and final result.</li>
+                    <li><strong>studentRegistration</strong> - stores module registration and unregistration information for each student.</li>
+                    <li><strong>studentAssessment</strong> - stores student assessment submissions, scores, and related assessment details.</li>
+                    <li><strong>studentClicks</strong> - stores total click activity for each student in a module presentation.</li>
+                    <li><strong>weeklyClicks</strong> - stores click totals organized by student and week.</li>
+                    <li><strong>activityTypeClicks</strong> - stores click totals organized by student and activity type.</li>
                 </ul>
-                <p>
-                    NOTE: The original database set included a large table named studentVle, which includede ~10.6 million entries. We compiled three tables from that
-                    large table, and these three tables are named: studentClicks, weeklyClicks, and activityTypeClicks.
-                </p>
+
+                <div class="note">
+                    <strong>Note:</strong> The original OULAD dataset included a very large table named <strong>studentVle</strong>. For the p was reorganized into the three derived tables <strong>studentClicks</strong>, <strong>weeklyClicks</strong>, and <strong>activityTypeClicks</strong> to make the data easier to store, query, and present in the application.
+                </div>
             </div>
         </div>
     </div>
-    
-    
+
     <footer>
         <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-    
