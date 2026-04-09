@@ -6,7 +6,7 @@
 - AJAX for client-server communications
 - PHP for backend
 - PostgreSQL + pgAdmin for database and GUI
-- MAMP & Apache for localized development environment
+- MAMP & Apache for local development environment
 
 ## How the Application Works
 Each interactive webpage follows the same general process:
