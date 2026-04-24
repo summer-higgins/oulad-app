@@ -1,256 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Data - OULAD</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Data - OULAD</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>OULAD Student Engagement Analytics</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="add.html">Add Data</a>
-        <a href="delete.html">Delete Data</a>
-        <a href="update.html">Update Data</a>
-        <a href="summary.html">Summary </a>
-        <a href="docs.html">Documentation</a>
-    </nav>
-    <main>
-        <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
-        <p>This dashboard provides insights into student engagement based on the OULAD dataset. You can add, delete, and update student data, as well as view summaries and documentation about the dataset.</p>
-        <p>Use the navigation links above to explore the different functionalities of the dashboard.</p>
-    </main>
+  <header>
+    <h1>OULAD Student Engagement Analytics</h1>
+  </header>
 
-    <div class="main-content">
-        <div class="left">
-                <div class="box">
-                    <h3>Delete Data Description</h3>
-                    <p>In this webpage, students are allowed to delete data from the OULAD database. In the section below includes a description of accepted user input.
-                    </p>
-                    <!-- describe how we can delete only from 6 tables: studentInfo, studentRegistration, studentAssessment, studentClicks, weeklyClicks, activityTypeClicks
-                    the form lists all primary + composite keys. explain this in the description.-->
-                </div>
-                <div class="box">
-                    <h3>Accepted User Input</h3>
-                    <p>include here a description of all data allowed + explanations of accepted input</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="add.html">Add Data</a>
+    <a href="delete.html">Delete Data</a>
+    <a href="update.html">Update Data</a>
+    <a href="summary.html">Summary</a>
+    <a href="docs.html">Documentation</a>
+  </nav>
 
-                    <!-- grouping based off tables -->
-                    <ul>
-                        <li>Table Information:
-                            <ul>
-                                <li>id_student
-                                    <p style="text-indent: 20px;">This is the student ID.<br>
-                                    Accepted values are: numbers.
-                                        <!--we might have to include a way to check if the student ID exists-->
-                                    </p>
-                                </li>
-                                <li>Code Module
-                                    <p style="text-indent: 20px;">This is the code module.<br>
-                                        The current accepted code modules:<br>
-                                        <ul>
-                                            <li>AAA</li>
-                                            <li>BBB</li>
-                                            <li>CCC</li>
-                                            <li>DDD</li>
-                                            <li>EEE</li>
-                                            <li>FFF</li>
-                                            <li>GGG</li>
-                                        </ul>
-                                    </p>
-                                </li>
-                                <li>Code Presentation:
-                                    <p style="text-indent: 20px;">This is the code presentation.<br>
-                                        The current accepted code presenations:<br>
-                                        <ul>
-                                            <li>2013B</li>
-                                            <li>2013J</li>
-                                            <li>2014B</li>
-                                            <li>2014J</li>
-                                        </ul>
-                                    </p>
-                                </li>
-                                <li>id_assessment
-                                    <p style="text-indent: 20px;">This is the assessment ID corresponding to student interactions in the VLE for a module.<br>
-                                        The current accepted assessment IDs listed in their ranges:<br>
-                                        <ul>
-                                            <li>1752 – 1756</li>
-                                            <li>1758 – 1762</li>
-                                            <li>14984 – 14989</li>
-                                            <li>14991 – 15001</li>
-                                            <li>15003 – 15013</li>
-                                            <li>15015 – 15024</li>
-                                            <li>24282 – 24299</li>
-                                            <li>25334 – 25368</li>
-                                            <li>30709 – 30712</li>
-                                            <li>30714 – 30717</li>
-                                            <li>30719 – 30722</li>
-                                            <li>34860 – 34871</li>
-                                            <li>34873 – 34884</li>
-                                            <li>34886 – 34897</li>
-                                            <li>34899 – 34910</li>
-                                            <li>37415 – 37423</li>
-                                            <li>37425 – 37433</li>
-                                            <li>37435 – 37443</li>
-                                        </ul>
-                                    </p>
-                                </li>
-                                <li>Week:
-                                    <p style="text-indent: 20px;">This is the student's week number by the module start date.<br>
-                                        Instructions on input calculation:
-                                        <ol>
-                                            <li>Determine start date of module.</li>
-                                            <li>Determine the week you would like to assess by date.</li>
-                                            <li>Count the number of weeks from start date to requested week date.</li>
-                                            <li>Input value into form.</li>
-                                        </ol>
-                                        <br>
-                                        Example:<br>
-                                        <ul>
-                                            <li>Module begins January 1st, 2026.</li>
-                                            <li>Week requested: February 12th, 2026.</li>
-                                            <li>User requested to view week 6 of the module.</li>
-                                            <li>Input: 6</li>
-                                        </ul>
-                                    </p> 
-                                </li>
-                                <li>Activity Type:
-                                    <p style="text-indent: 20px;">This is the activity type.<br>
-                                        The current accepted activity types:<br>
-                                        <ul>
-                                            <li>resource</li>
-                                            <li>oucontent</li>
-                                            <li>url</li>
-                                            <li>homepage</li>
-                                            <li>subpage</li>
-                                            <li>glossary</li>
-                                            <li>oucollaborate</li>
-                                            <li>forumng</li>
-                                            <li>dataplus</li>
-                                        </ul>
-                                    </p>  
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-        </div>
+  <main>
+    <h2>Delete Data from OULAD Database</h2>
+    <p>This page allows users to remove records from the OULAD database.</p>
+    <p>Please review the instructions on the left and use the matching delete form on the right.</p>
+  </main>
 
-        <div class="right">
-            <div class="box big">
-                <h2>Delete Data Form</h2>
-                <p>In this section, users can delete data according to the guideline to the left. Please fill out the form below in order to delete your requested data.</p>
+  <div class="main-content">
+    <div class="left">
+      <div class="box">
+        <h3>Delete Data Description</h3>
+        <p>
+          In this webpage, users are allowed to delete records from the OULAD database.
+          Each section on the right corresponds to a specific table. Enter the required key fields carefully.
+        </p>
+      </div>
 
-                <!-- users can edit studentInfo, studentRegistration, studentAssessment, studentClicks, weeklyClicks, activityTypeClicks
+      <div class="box">
+        <h3>Delete Instructions</h3>
+        <p>
+          To delete data correctly, use the identifying fields for the matching table.
+          If the key values do not exactly match an existing record, nothing will be deleted.
+        </p>
 
-                <!-- STUDENT INPUT FORM -->
-                <div class="small box">
-                  <h3>Delete Student Info</h3>
-                  <form>
-                    <label for="id_student">Student ID:</label>
-                    <input type="text" id="id_student" name="id_student" required><br>
+        <ul>
+          <li><strong>Student Information</strong>
+            <p style="text-indent: 20px;">
+              Use <strong>Student ID</strong>, <strong>Code Module</strong>, and <strong>Code Presentation</strong>.
+            </p>
+          </li>
 
-                    <label for="code_module">Code Module:</label>
-                    <input type="text" id="code_module" name="code_module" required><br>
+          <li><strong>Student Registration</strong>
+            <p style="text-indent: 20px;">
+              Use <strong>Student ID</strong>, <strong>Code Module</strong>, and <strong>Code Presentation</strong>.
+            </p>
+          </li>
 
-                    <label for="code_presentation">Code Presentation:</label>
-                    <input type="text" id="code_presentation" name="code_presentation" required><br>
+          <li><strong>Student Assessment</strong>
+            <p style="text-indent: 20px;">
+              Use <strong>Student ID</strong> and <strong>Assessment ID</strong>.
+            </p>
+          </li>
 
-                    <button type="submit">Delete Student Info</button><br>
-                  </form>
-                </div>
+          <li><strong>Total Clicks</strong>
+            <p style="text-indent: 20px;">
+              Use <strong>Student ID</strong>, <strong>Code Module</strong>, and <strong>Code Presentation</strong>.
+            </p>
+          </li>
 
-                <div class="small box">
-                  <h3>Delete Registration Info</h3>
-                  <form>
-                    <label for="id_student">Student ID:</label>
-                    <input type="text" id="id_student" name="id_student" required><br>
+          <li><strong>Weekly Clicks</strong>
+            <p style="text-indent: 20px;">
+              Use <strong>Student ID</strong>, <strong>Code Module</strong>, <strong>Code Presentation</strong>, and <strong>Week</strong>.
+            </p>
+          </li>
 
-                    <label for="code_module">Code Module:</label>
-                    <input type="text" id="code_module" name="code_module" required><br>
-
-                    <label for="code_presentation">Code Presentation:</label>
-                    <input type="text" id="code_presentation" name="code_presentation" required><br>
-
-                    <button type="submit">Delete Registration Info</button><br>
-                  </form>
-                </div>
-
-                <div class="small box">
-                  <h3>Delete Student Assessment Info</h3>
-                  <form>
-                    <label for="id_student">Student ID:</label>
-                    <input type="text" id="id_student" name="id_student" required><br>
-
-                    <label for="id_assessment">Assessment ID:</label>
-                    <input type="text" id="id_assessment" name="id_assessment" required><br>
-                    
-                    <button type="submit">Delete Student Assessment Info</button><br>
-                  </form>
-                </div>
-
-                <div class="small box">
-                  <h3>Delete Total Clicks Info</h3>
-                  <form>
-                    <label for="id_student">Student ID:</label>
-                    <input type="text" id="id_student" name="id_student" required><br>
-
-                    <label for="code_module">Code Module:</label>
-                    <input type="text" id="code_module" name="code_module" required><br>
-
-                    <label for="code_presentation">Code Presentation:</label>
-                    <input type="text" id="code_presentation" name="code_presentation" required><br>
-                    
-                    <button type="submit">Delete Total Clicks Info</button><br>
-                  </form>
-                </div>
-
-                <div class="small box">
-                  <h3>Delete Weekly Clicks Info</h3>
-                  <form>
-                    <label for="id_student">Student ID:</label>
-                    <input type="text" id="id_student" name="id_student" required><br>
-
-                    <label for="code_module">Code Module:</label>
-                    <input type="text" id="code_module" name="code_module" required><br>
-
-                    <label for="code_presentation">Code Presentation:</label>
-                    <input type="text" id="code_presentation" name="code_presentation" required><br>
-
-                    <label for="week">Week:</label>
-                    <input type="text" id="week" name="week" required><br>
-                    
-                    <button type="submit">Delete Weekly Clicks Info</button>
-                  </form>
-                </div>
-
-              <div class="small box">
-                  <h3>Delete Activity Types Clicks Info</h3>
-                  <form>
-                    <label for="id_student">Student ID:</label>
-                    <input type="text" id="id_student" name="id_student" required><br>
-
-                    <label for="code_module">Code Module:</label>
-                    <input type="text" id="code_module" name="code_module" required><br>
-
-                    <label for="code_presentation">Code Presentation:</label>
-                    <input type="text" id="code_presentation" name="code_presentation" required><br>
-
-                    <label for="activity_type">Activity Type:</label>
-                    <input type="text" id="activity_type" name="activity_type" required><br>
-                    
-                    <button type="submit">Delete Activity Type Info</button><br>
-                  </form>
-                </div>
-            </div>
-        </div>
+          <li><strong>Activity Type Clicks</strong>
+            <p style="text-indent: 20px;">
+              Use <strong>Student ID</strong>, <strong>Code Module</strong>, <strong>Code Presentation</strong>, and <strong>Activity Type</strong>.
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
-    
-    
-    <footer>
-        <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
-    </footer>
+
+    <div class="right">
+      <div class="box big">
+        <h2>Delete Data Forms</h2>
+        <p>Choose the correct section below and enter the matching identifying fields.</p>
+
+        <h3>Delete Student Information</h3>
+        <form id="deleteStudentForm" action="delete.php" method="POST">
+          <input type="hidden" name="form_type" value="student">
+
+          <label for="student_id_student">Student ID:</label>
+          <input type="text" id="student_id_student" name="id_student" />
+
+          <label for="student_code_module">Code Module:</label>
+          <input type="text" id="student_code_module" name="code_module" />
+
+          <label for="student_code_presentation">Code Presentation:</label>
+          <input type="text" id="student_code_presentation" name="code_presentation" />
+
+          <button type="submit">Delete Student Info</button>
+        </form>
+
+        <hr>
+
+        <h3>Delete Student Registration</h3>
+        <form id="deleteRegistrationForm" action="delete.php" method="POST">
+          <input type="hidden" name="form_type" value="registration">
+
+          <label for="registration_id_student">Student ID:</label>
+          <input type="text" id="registration_id_student" name="id_student" />
+
+          <label for="registration_code_module">Code Module:</label>
+          <input type="text" id="registration_code_module" name="code_module" />
+
+          <label for="registration_code_presentation">Code Presentation:</label>
+          <input type="text" id="registration_code_presentation" name="code_presentation" />
+
+          <button type="submit">Delete Registration Info</button>
+        </form>
+
+        <hr>
+
+        <h3>Delete Student Assessment</h3>
+        <form id="deleteAssessmentForm" action="delete.php" method="POST">
+          <input type="hidden" name="form_type" value="assessment">
+
+          <label for="assessment_id_student">Student ID:</label>
+          <input type="text" id="assessment_id_student" name="id_student" />
+
+          <label for="assessment_id_assessment">Assessment ID:</label>
+          <input type="text" id="assessment_id_assessment" name="id_assessment" />
+
+          <button type="submit">Delete Assessment Info</button>
+        </form>
+
+        <hr>
+
+        <h3>Delete Total Clicks</h3>
+        <form id="deleteTotalClicksForm" action="delete.php" method="POST">
+          <input type="hidden" name="form_type" value="totalclicks">
+
+          <label for="totalclicks_id_student">Student ID:</label>
+          <input type="text" id="totalclicks_id_student" name="id_student" />
+
+          <label for="totalclicks_code_module">Code Module:</label>
+          <input type="text" id="totalclicks_code_module" name="code_module" />
+
+          <label for="totalclicks_code_presentation">Code Presentation:</label>
+          <input type="text" id="totalclicks_code_presentation" name="code_presentation" />
+
+          <button type="submit">Delete Total Clicks Info</button>
+        </form>
+
+        <hr>
+
+        <h3>Delete Weekly Clicks</h3>
+        <form id="deleteWeeklyClicksForm" action="delete.php" method="POST">
+          <input type="hidden" name="form_type" value="weeklyclicks">
+
+          <label for="weeklyclicks_id_student">Student ID:</label>
+          <input type="text" id="weeklyclicks_id_student" name="id_student" />
+
+          <label for="weeklyclicks_code_module">Code Module:</label>
+          <input type="text" id="weeklyclicks_code_module" name="code_module" />
+
+          <label for="weeklyclicks_code_presentation">Code Presentation:</label>
+          <input type="text" id="weeklyclicks_code_presentation" name="code_presentation" />
+
+          <label for="week">Week:</label>
+          <input type="text" id="week" name="week" />
+
+          <button type="submit">Delete Weekly Clicks Info</button>
+        </form>
+
+        <hr>
+
+        <h3>Delete Activity Type Clicks</h3>
+        <form id="deleteActivityForm" action="delete.php" method="POST">
+          <input type="hidden" name="form_type" value="activity">
+
+          <label for="activity_id_student">Student ID:</label>
+          <input type="text" id="activity_id_student" name="id_student" />
+
+          <label for="activity_code_module">Code Module:</label>
+          <input type="text" id="activity_code_module" name="code_module" />
+
+          <label for="activity_code_presentation">Code Presentation:</label>
+          <input type="text" id="activity_code_presentation" name="code_presentation" />
+
+          <label for="activity_type">Activity Type:</label>
+          <input type="text" id="activity_type" name="activity_type" />
+
+          <button type="submit">Delete Activity Type Clicks Info</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
+  </footer>
+
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+      <h3>Submission Status</h3>
+      <p id="popupMessage"></p>
+      <button type="button" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

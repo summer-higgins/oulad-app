@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summary - OULAD</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .summary-actions {
+            margin: 20px 0;
+        }
+
+        .summary-actions button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .summary-results {
+            margin-top: 20px;
+        }
+
+        .summary-results .summary-panel {
+            margin-bottom: 20px;
+        }
+
+        .loading-note {
+            margin-top: 15px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,22 +49,22 @@
     <main>
         <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
         <p>This webpage presents a summarized view of the database application and the kinds of analytics the system is designed to display.</p>
-        <p>For this interface phase, the content below is a front-end summary layout that shows how results and charts would be organized in the full project.</p>
+        <p>Click the button below to load live summary data from the database.</p>
     </main>
 
     <div class="main-content">
         <div class="left">
             <div class="box">
                 <h3>Summary Page Description</h3>
-                <p>This webpage is designed to display summarized information extracted from the database. It brings together high-level project information and prototype visual panels that show how engagement data can be presented to the user.</p>
+                <p>This webpage displays summarized information extracted from the database. It brings together high-level project information and live summary panels that show how engagement data can be presented to the user.</p>
             </div>
 
             <div class="box">
                 <h3>Summary Notes</h3>
                 <ul>
-                    <li>This page is a static prototype for the Task 3 interface.</li>
-                    <li>The layout demonstrates how charts, counts, and grouped information can appear in the final application.</li>
-                    <li>The final version of the project can connect these panels to real SQL queries and database outputs.</li>
+                    <li>This page can load live database summaries.</li>
+                    <li>The results below come from real SQL queries.</li>
+                    <li>The summary panels show counts, grouped results, and engagement activity.</li>
                 </ul>
             </div>
         </div>
@@ -66,73 +92,82 @@
                     </div>
                 </div>
 
-                <div class="summary-panel">
-                    <h3>Example Summary Areas</h3>
-                    <div class="bar-row">
-                        <span>Student Results by Module</span>
-                        <div class="bar"><div class="fill fill-one"></div></div>
-                    </div>
-                    <div class="bar-row">
-                        <span>Weekly Engagement Trend</span>
-                        <div class="bar"><div class="fill fill-two"></div></div>
-                    </div>
-                    <div class="bar-row">
-                        <span>Assessment Participation</span>
-                        <div class="bar"><div class="fill fill-three"></div></div>
-                    </div>
-                    <div class="bar-row">
-                        <span>Activity Type Click Distribution</span>
-                        <div class="bar"><div class="fill fill-four"></div></div>
-                    </div>
+                <div class="summary-actions">
+                    <form id="summaryForm" action="summary.php" method="POST">
+                        <button type="submit">Load Live Summary</button>
+                    </form>
+                    <div id="loadingMessage" class="loading-note"></div>
                 </div>
 
-                <div class="summary-panel">
-                    <h3>Planned Summary Outputs</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Summary Area</th>
-                                <th>Purpose</th>
-                                <th>Possible Source Tables</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Student outcomes</td>
-                                <td>Compare pass, fail, distinction, and withdrawn results</td>
-                                <td>studentInfo</td>
-                            </tr>
-                            <tr>
-                                <td>Registration activity</td>
-                                <td>Review when students register or unregister relative to module start</td>
-                                <td>studentRegistration</td>
-                            </tr>
-                            <tr>
-                                <td>Assessment performance</td>
-                                <td>Summarize submitted work and scores</td>
-                                <td>studentAssessment</td>
-                            </tr>
-                            <tr>
-                                <td>Total engagement</td>
-                                <td>Measure total click activity by student</td>
-                                <td>studentClicks</td>
-                            </tr>
-                            <tr>
-                                <td>Weekly engagement</td>
-                                <td>Track click totals over time</td>
-                                <td>weeklyClicks</td>
-                            </tr>
-                            <tr>
-                                <td>Activity type engagement</td>
-                                <td>Compare which VLE resource types receive the most interaction</td>
-                                <td>activityTypeClicks</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <div id="summaryResults" class="summary-results">
+                    <div class="summary-panel">
+                        <h3>Example Summary Areas</h3>
+                        <div class="bar-row">
+                            <span>Student Results by Module</span>
+                            <div class="bar"><div class="fill fill-one"></div></div>
+                        </div>
+                        <div class="bar-row">
+                            <span>Weekly Engagement Trend</span>
+                            <div class="bar"><div class="fill fill-two"></div></div>
+                        </div>
+                        <div class="bar-row">
+                            <span>Assessment Participation</span>
+                            <div class="bar"><div class="fill fill-three"></div></div>
+                        </div>
+                        <div class="bar-row">
+                            <span>Activity Type Click Distribution</span>
+                            <div class="bar"><div class="fill fill-four"></div></div>
+                        </div>
+                    </div>
 
-                <div class="note">
-                    <strong>Prototype Notice:</strong> The visual panels on this webpage represent the intended summary layout for the completed application. In the full implementation stage, these sections can be connected to SQL queries and live database results.
+                    <div class="summary-panel">
+                        <h3>Planned Summary Outputs</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Summary Area</th>
+                                    <th>Purpose</th>
+                                    <th>Possible Source Tables</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Student outcomes</td>
+                                    <td>Compare pass, fail, distinction, and withdrawn results</td>
+                                    <td>studentInfo</td>
+                                </tr>
+                                <tr>
+                                    <td>Registration activity</td>
+                                    <td>Review when students register or unregister relative to module start</td>
+                                    <td>studentRegistration</td>
+                                </tr>
+                                <tr>
+                                    <td>Assessment performance</td>
+                                    <td>Summarize submitted work and scores</td>
+                                    <td>studentAssessment</td>
+                                </tr>
+                                <tr>
+                                    <td>Total engagement</td>
+                                    <td>Measure total click activity by student</td>
+                                    <td>studentClicks</td>
+                                </tr>
+                                <tr>
+                                    <td>Weekly engagement</td>
+                                    <td>Track click totals over time</td>
+                                    <td>weeklyClicks</td>
+                                </tr>
+                                <tr>
+                                    <td>Activity type engagement</td>
+                                    <td>Compare which VLE resource types receive the most interaction</td>
+                                    <td>activityTypeClicks</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="note">
+                        <strong>Prototype Notice:</strong> Click "Load Live Summary" to replace these example panels with live database results.
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,5 +176,46 @@
     <footer>
         <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("summaryForm");
+            const resultsBox = document.getElementById("summaryResults");
+            const loadingMessage = document.getElementById("loadingMessage");
+
+            if (!form || !resultsBox) {
+                return;
+            }
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                loadingMessage.textContent = "Loading summary data...";
+
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form)
+                })
+                .then(async response => {
+                    const text = await response.text();
+
+                    if (!response.ok) {
+                        throw new Error(text || ("Server error: " + response.status));
+                    }
+
+                    return text;
+                })
+                .then(data => {
+                    resultsBox.innerHTML = data;
+                    loadingMessage.textContent = "Summary loaded successfully.";
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    resultsBox.innerHTML = "<div class='note'><strong>Error:</strong> Failed to load summary data.</div>";
+                    loadingMessage.textContent = "";
+                });
+            });
+        });
+    </script>
 </body>
 </html>

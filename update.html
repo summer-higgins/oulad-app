@@ -46,7 +46,7 @@
                 </ul>
 
                 <div class="note">
-                    <strong>Guideline:</strong> For this design stage, the forms below demonstrate the intended webpage structure and input organization. Backend update logic will be connected in the implementation stage.
+                    <strong>Guideline:</strong> Users should enter the identifying key fields and only the new value fields they want to change.
                 </div>
             </div>
         </div>
@@ -56,9 +56,13 @@
                 <h2>Update Data Form</h2>
                 <p>Use the sections below to identify the record you want to update and enter the replacement value or values.</p>
 
+                <div id="update-response" class="note" style="display:none;"></div>
+
                 <div class="small box">
                     <h3>Update Student Info</h3>
-                    <form>
+                    <form action="update.php" method="POST">
+                        <input type="hidden" name="form_type" value="studentinfo">
+
                         <label for="u_id_student_1">Student ID:</label>
                         <input type="text" id="u_id_student_1" name="id_student" required>
 
@@ -83,7 +87,9 @@
 
                 <div class="small box">
                     <h3>Update Registration Info</h3>
-                    <form>
+                    <form action="update.php" method="POST">
+                        <input type="hidden" name="form_type" value="registration">
+
                         <label for="u_id_student_2">Student ID:</label>
                         <input type="text" id="u_id_student_2" name="id_student" required>
 
@@ -105,7 +111,9 @@
 
                 <div class="small box">
                     <h3>Update Student Assessment Info</h3>
-                    <form>
+                    <form action="update.php" method="POST">
+                        <input type="hidden" name="form_type" value="assessment">
+
                         <label for="u_id_student_3">Student ID:</label>
                         <input type="text" id="u_id_student_3" name="id_student" required>
 
@@ -118,13 +126,18 @@
                         <label for="u_score">New Score:</label>
                         <input type="text" id="u_score" name="score">
 
+                        <label for="u_is_banked">New Is Banked:</label>
+                        <input type="text" id="u_is_banked" name="is_banked" placeholder="0 or 1">
+
                         <button type="submit">Update Assessment Info</button>
                     </form>
                 </div>
 
                 <div class="small box">
                     <h3>Update Total Clicks Info</h3>
-                    <form>
+                    <form action="update.php" method="POST">
+                        <input type="hidden" name="form_type" value="totalclicks">
+
                         <label for="u_id_student_4">Student ID:</label>
                         <input type="text" id="u_id_student_4" name="id_student" required>
 
@@ -135,7 +148,7 @@
                         <input type="text" id="u_code_presentation_4" name="code_presentation" required>
 
                         <label for="u_total_clicks">New Total Clicks:</label>
-                        <input type="text" id="u_total_clicks" name="sum_click">
+                        <input type="text" id="u_total_clicks" name="total_clicks">
 
                         <button type="submit">Update Total Clicks Info</button>
                     </form>
@@ -143,7 +156,9 @@
 
                 <div class="small box">
                     <h3>Update Weekly Clicks Info</h3>
-                    <form>
+                    <form action="update.php" method="POST">
+                        <input type="hidden" name="form_type" value="weeklyclicks">
+
                         <label for="u_id_student_5">Student ID:</label>
                         <input type="text" id="u_id_student_5" name="id_student" required>
 
@@ -157,7 +172,7 @@
                         <input type="text" id="u_week" name="week" required>
 
                         <label for="u_weekly_clicks">New Weekly Clicks:</label>
-                        <input type="text" id="u_weekly_clicks" name="clicks">
+                        <input type="text" id="u_weekly_clicks" name="weekly_clicks">
 
                         <button type="submit">Update Weekly Clicks Info</button>
                     </form>
@@ -165,7 +180,9 @@
 
                 <div class="small box">
                     <h3>Update Activity Type Clicks Info</h3>
-                    <form>
+                    <form action="update.php" method="POST">
+                        <input type="hidden" name="form_type" value="activityclicks">
+
                         <label for="u_id_student_6">Student ID:</label>
                         <input type="text" id="u_id_student_6" name="id_student" required>
 
@@ -179,7 +196,7 @@
                         <input type="text" id="u_activity_type" name="activity_type" required>
 
                         <label for="u_activity_clicks">New Activity Type Clicks:</label>
-                        <input type="text" id="u_activity_clicks" name="clicks">
+                        <input type="text" id="u_activity_clicks" name="activity_clicks">
 
                         <button type="submit">Update Activity Type Clicks Info</button>
                     </form>
@@ -191,5 +208,46 @@
     <footer>
         <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
     </footer>
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+        <h3>Update Status</h3>
+        <p id="popupMessage"></p>
+        <button type="button" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    function showPopup(message) {
+        document.getElementById("popupMessage").textContent = message;
+        document.getElementById("popupOverlay").style.display = "flex";
+    }
+
+    window.closePopup = function () {
+        document.getElementById("popupOverlay").style.display = "none";
+    };
+
+    document.querySelectorAll('form[action="update.php"]').forEach(form => {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch("update.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                showPopup(data);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                showPopup("Update failed.");
+            });
+        });
+    });
+});
+</script>  
 </body>
 </html>

@@ -10,198 +10,218 @@
     <header>
         <h1>OULAD Student Engagement Analytics</h1>
     </header>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="add.html">Add Data</a>
         <a href="delete.html">Delete Data</a>
         <a href="update.html">Update Data</a>
-        <a href="summary.html">Summary </a>
+        <a href="summary.html">Summary</a>
         <a href="docs.html">Documentation</a>
     </nav>
+
     <main>
         <h2>Welcome to the OULAD Student Engagement Analytics Dashboard</h2>
-        <p>This dashboard provides insights into student engagement based on the OULAD dataset. You can add, delete, and update student data, as well as view summaries and documentation about the dataset.</p>
-        <p>Use the navigation links above to explore the different functionalities of the dashboard.</p>
+        <p>This webpage allows users to add a new record to more than one table in the database.</p>
+        <p>We have provided a layout of instructions and the data form below.</p>
     </main>
 
     <div class="main-content">
         <div class="left">
-                <div class="box">
-                    <h3>Add Data Description</h3>
-                    <p>In this webpage, students are allowed to add data to the OULAD database. In the section below includes a description of allowed user input.
-                    </p>
-                </div>
-                <div class="box">
-                    <h3>Accepted user Input</h3>
-                    <p>The descriptions below list all available input. We advise that you read carefully and follow all instructions to ensure 
-                    accurate data entry.</p>
+            <div class="box">
+                <h3>Add Data Description</h3>
+                <p>In this webpage, students are allowed to add data to the OULAD database. The section below includes a description of allowed user input.</p>
+            </div>
 
-                    <!-- grouping based off tables -->
-                    <ul>
-                        <li>Student Information:
-                            <ul>
-                                <li>Student ID
-                                    <p style="text-indent: 20px;">This is the student ID.<br>
-                                    Accepted values are: numbers.
-                                    </p>
-                                </li>
-                                <li>Gender
-                                    <p style="text-indent: 20px;">This is the student's gender.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                                <li>Region
-                                    <p style="text-indent: 20px;">This is the student's geographic region during the time they took the module-presentation.<br>
-                                    Accepted values are: any valid lettered input.
-                                    </p>
-                                </li>
-                                <li>Highest Education
-                                    <p style="text-indent: 20px;">This is the highest student education level on entry to the module presentation.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                                <li>IMD Band
-                                    <p style="text-indent: 20px;">This is a representation of how wealthy or disadvantaged the area the student lives in is.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                                <li>Age Band
-                                    <p style="text-indent: 20px;">This is the band of the student's age.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                                <li>Number of Previous Attempts
-                                    <p style="text-indent: 20px;">This is the number of times the student has attempted a module.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                                <li>Studied Credits
-                                    <p style="text-indent: 20px;">This is the total number of credits for the module the student is currently studying.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                                <li>Disability
-                                    <p style="text-indent: 20px;">This is an indication of student disability.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                                <li>Final Result
-                                    <p style="text-indent: 20px;">This is the student's final result in the module-presentation.<br>
-                                    Accepted values are listed within the form.
-                                    </p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Student Registration Information:
-                            <ul>
-                                <li>Registered Date
-                                    <p style="text-indent: 20px;">This is the student's number of days registered by the module start date.<br>
-                                        Instructions on input calculation:
-                                        <ol>
-                                            <li>Determine start date of module.</li>
-                                            <li>Determine date registered for module.</li>
-                                            <li>Count the number of days from registered date to start date.<br>
-                                            If the student registered before the start date, use '-' before the value.</li>
-                                            <li>Input value into form.</li>
-                                        </ol>
-                                        <br>
-                                        Example:<br>
-                                        <ul>
-                                            <li>Module begins January 1st, 2026.</li>
-                                            <li>Date registered: December 2nd, 2025.</li>
-                                            <li>User registered for the module 30 days before the start date.</li>
-                                            <li>Input: -30</li>
-                                        </ul>
-                                    </p> 
-                                </li>
-                                <li>Unregistered Date
-                                    <p style="text-indent: 20px;">This is the student's number of days unregistered by the module start date.<br>
-                                        Instructions on input calculation:
-                                        <ol>
-                                            <li>Determine start date of module.</li>
-                                            <li>Determine date unregistered for module.</li>
-                                            <li>Count the number of days from unregistered date to start date.<br>
-                                            If the student unregistered before the start date, use '-' before the value.</li>
-                                            <li>Input value into form.</li>
-                                        </ol>
-                                        <br>
-                                        Example:<br>
-                                        <ul>
-                                            <li>Module begins January 1st, 2026.</li>
-                                            <li>Date unregistered: January 4th, 2026.</li>
-                                            <li>User registered for the module 3 days before the start date.</li>
-                                            <li>Input: 3</li>
-                                        </ul>
-                                    </p> 
-                                </li>
-                                <li>any other attributes list starting here</li>
-                            </ul>
-                        </li>
-                        <li>Student Assessment Information:
-                            <p><strong>To accurately input assessment information, please follow all guidelines listed below.</strong></p>
-                            <ul>
-                                <li>Assessment ID
-                                    <p style="text-indent: 20px;">This is the assessment ID corresponding to student interactions in the VLE for a module.<br>
-                                        The current accepted assessment IDs listed in their ranges:<br>
-                                        <ul>
-                                            <li>1752 – 1756</li>
-                                            <li>1758 – 1762</li>
-                                            <li>14984 – 14989</li>
-                                            <li>14991 – 15001</li>
-                                            <li>15003 – 15013</li>
-                                            <li>15015 – 15024</li>
-                                            <li>24282 – 24299</li>
-                                            <li>25334 – 25368</li>
-                                            <li>30709 – 30712</li>
-                                            <li>30714 – 30717</li>
-                                            <li>30719 – 30722</li>
-                                            <li>34860 – 34871</li>
-                                            <li>34873 – 34884</li>
-                                            <li>34886 – 34897</li>
-                                            <li>34899 – 34910</li>
-                                            <li>37415 – 37423</li>
-                                            <li>37425 – 37433</li>
-                                            <li>37435 – 37443</li>
-                                        </ul>
-                                    </p>
-                                </li>
-                                <li>Date Submitted
-                                    <p style="text-indent: 20px;">This is the date of student submission for the assessment, measured as the number of days since the start of the module presentation.<br>
-                                        Instructions on input calculation:
-                                        <ol>
-                                            <li>Determine start date of module.</li>
-                                            <li>Determine date of the assessment submission.</li>
-                                            <li>Count the number of days from start date to submission date.<br>
-                                            <li>Input value into form.</li>
-                                        </ol>
-                                        <br>
-                                        Example:<br>
-                                        <ul>
-                                            <li>Module begins January 1st, 2026.</li>
-                                            <li>Date submission: January 31st, 2026.</li>
-                                            <li>User submitted the assessment 30 days after the module start date.</li>
-                                            <li>Input: 30</li>
-                                        </ul>
-                                    </p>
-                                </li>
-                                <li>Score
-                                    <p style="text-indent: 20px;">This is the score the student's assessment.<br>
-                                        Accepted values are between 0 and 100.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            <div class="box">
+                <h3>Accepted User Input</h3>
+                <p>The descriptions below list all available input. Please read carefully and follow all instructions to ensure accurate data entry.</p>
 
-                </div>
+                <ul>
+                    <li>Student Information:
+                        <ul>
+                            <li>Code Module and Code Presentation
+                                <p style="text-indent: 20px;">
+                                    Code Module: This is the code name of the module, which serves as the identifier.<br>
+                                    Code Presentation: This is the code name of the presentation. It consists of the year and "B" for the presentation starting in February and "J" for the presentation starting in October.<br>
+                                    <strong>Please follow the format below to submit your module and presentation.</strong><br>
+                                    Users must input the module code and its assigned presentation in their designated submissions, or the form will not accept the input.
+                                </p>
+                                <ul>
+                                    <li>AAA | 2013J</li>
+                                    <li>AAA | 2014J</li>
+                                    <li>BBB | 2013B</li>
+                                    <li>BBB | 2013J</li>
+                                    <li>BBB | 2014B</li>
+                                    <li>BBB | 2014J</li>
+                                    <li>CCC | 2014B</li>
+                                    <li>CCC | 2014J</li>
+                                    <li>DDD | 2013B</li>
+                                    <li>DDD | 2013J</li>
+                                    <li>DDD | 2014B</li>
+                                    <li>DDD | 2014J</li>
+                                    <li>EEE | 2013J</li>
+                                    <li>EEE | 2014B</li>
+                                    <li>EEE | 2014J</li>
+                                    <li>FFF | 2013B</li>
+                                    <li>FFF | 2013J</li>
+                                    <li>FFF | 2014B</li>
+                                    <li>FFF | 2014J</li>
+                                    <li>GGG | 2013J</li>
+                                    <li>GGG | 2014B</li>
+                                    <li>GGG | 2014J</li>
+                                </ul>
+                            </li>
+
+                            <li>Student ID
+                                <p style="text-indent: 20px;">This is the student ID.<br>Accepted values are numbers.</p>
+                            </li>
+
+                            <li>Gender
+                                <p style="text-indent: 20px;">This is the student's gender.<br>Accepted values are listed within the form.</p>
+                            </li>
+
+                            <li>Region
+                                <p style="text-indent: 20px;">This is the student's geographic region during the time they took the module-presentation.<br>Accepted values are any valid lettered input.</p>
+                            </li>
+
+                            <li>Highest Education
+                                <p style="text-indent: 20px;">This is the highest student education level on entry to the module presentation.<br>Accepted values are listed within the form.</p>
+                            </li>
+
+                            <li>IMD Band
+                                <p style="text-indent: 20px;">This is a representation of how wealthy or disadvantaged the area the student lives in is.<br>Accepted values are listed within the form.</p>
+                            </li>
+
+                            <li>Age Band
+                                <p style="text-indent: 20px;">This is the band of the student's age.<br>Accepted values are listed within the form.</p>
+                            </li>
+
+                            <li>Number of Previous Attempts
+                                <p style="text-indent: 20px;">This is the number of times the student has attempted a module.<br>Accepted values are listed within the form.</p>
+                            </li>
+
+                            <li>Studied Credits
+                                <p style="text-indent: 20px;">This is the total number of credits for the module the student is currently studying.<br>Accepted values are listed within the form.</p>
+                            </li>
+
+                            <li>Disability
+                                <p style="text-indent: 20px;">This is an indication of student disability.<br>Accepted values are listed within the form.</p>
+                            </li>
+
+                            <li>Final Result
+                                <p style="text-indent: 20px;">This is the student's final result in the module-presentation.<br>Accepted values are listed within the form.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Student Registration Information:
+                        <ul>
+                            <li>Registered Date
+                                <p style="text-indent: 20px;">
+                                    This is the student's number of days registered by the module start date.<br>
+                                    Instructions on input calculation:
+                                </p>
+                                <ol>
+                                    <li>Determine start date of module.</li>
+                                    <li>Determine date registered for module.</li>
+                                    <li>Count the number of days from registered date to start date. If the student registered before the start date, use "-" before the value.</li>
+                                    <li>Input value into form.</li>
+                                </ol>
+                                <p style="text-indent: 20px;">Example:</p>
+                                <ul>
+                                    <li>Module begins January 1st, 2026.</li>
+                                    <li>Date registered: December 2nd, 2025.</li>
+                                    <li>User registered for the module 30 days before the start date.</li>
+                                    <li>Input: -30</li>
+                                </ul>
+                            </li>
+
+                            <li>Unregistered Date
+                                <p style="text-indent: 20px;">
+                                    This is the student's number of days unregistered by the module start date.<br>
+                                    Instructions on input calculation:
+                                </p>
+                                <ol>
+                                    <li>Determine start date of module.</li>
+                                    <li>Determine date unregistered for module.</li>
+                                    <li>Count the number of days from unregistered date to start date. If the student unregistered before the start date, use "-" before the value.</li>
+                                    <li>Input value into form.</li>
+                                </ol>
+                                <p style="text-indent: 20px;">Example:</p>
+                                <ul>
+                                    <li>Module begins January 1st, 2026.</li>
+                                    <li>Date unregistered: January 4th, 2026.</li>
+                                    <li>User unregistered for the module 3 days after the start date.</li>
+                                    <li>Input: 3</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Student Assessment Information:
+                        <p><strong>To accurately input assessment information, please follow all guidelines listed below.</strong></p>
+                        <ul>
+                            <li>Assessment ID
+                                <p style="text-indent: 20px;">This is the assessment ID corresponding to student interactions in the VLE for a module.<br>The current accepted assessment IDs are listed in these ranges:</p>
+                                <ul>
+                                    <li>1752 – 1756</li>
+                                    <li>1758 – 1762</li>
+                                    <li>14984 – 14989</li>
+                                    <li>14991 – 15001</li>
+                                    <li>15003 – 15013</li>
+                                    <li>15015 – 15024</li>
+                                    <li>24282 – 24299</li>
+                                    <li>25334 – 25368</li>
+                                    <li>30709 – 30712</li>
+                                    <li>30714 – 30717</li>
+                                    <li>30719 – 30722</li>
+                                    <li>34860 – 34871</li>
+                                    <li>34873 – 34884</li>
+                                    <li>34886 – 34897</li>
+                                    <li>34899 – 34910</li>
+                                    <li>37415 – 37423</li>
+                                    <li>37425 – 37433</li>
+                                    <li>37435 – 37443</li>
+                                </ul>
+                            </li>
+
+                            <li>Date Submitted
+                                <p style="text-indent: 20px;">This is the date of student submission for the assessment, measured as the number of days since the start of the module presentation.</p>
+                                <ol>
+                                    <li>Determine start date of module.</li>
+                                    <li>Determine date of the assessment submission.</li>
+                                    <li>Count the number of days from start date to submission date.</li>
+                                    <li>Input value into form.</li>
+                                </ol>
+                                <p style="text-indent: 20px;">Example:</p>
+                                <ul>
+                                    <li>Module begins January 1st, 2026.</li>
+                                    <li>Date submission: January 31st, 2026.</li>
+                                    <li>User submitted the assessment 30 days after the module start date.</li>
+                                    <li>Input: 30</li>
+                                </ul>
+                            </li>
+
+                            <li>Banked Flag
+                                <p style="text-indent: 20px;">This is a status flag indicating that the assessment result has been transferred from a previous presentation.<br>Accepted values are 0 or 1.</p>
+                            </li>
+
+                            <li>Assessment Score
+                                <p style="text-indent: 20px;">This is the student's assessment score.<br>Accepted values are between 0 and 100.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="right">
             <div class="box big">
                 <h2>Add Data Form</h2>
-                <p>In this section, users can input data according to the guideline on the left to insert data into our database. Please fill out the form below in order to add your data.</p>
+                <p>In this section, users can input data according to the guidelines on the left to insert data into our database. Please fill out the form below.</p>
 
-                <!-- STUDENT INPUT FORM -->
-                <form action="add.php" method="get">
+                <form id="addForm" action="add.php" method="POST">
                     <label for="id_student">Student ID:</label>
                     <input type="text" id="id_student" name="id_student">
 
@@ -217,39 +237,39 @@
                     <input type="text" id="region" name="region">
 
                     <p>Highest Education:</p>
-                    <input type="radio" id="HEQual" name="highest_education" value="HE">
+                    <input type="radio" id="HEQual" name="highest_education" value="HE Qualification">
                     <label for="HEQual">HE Qualification</label><br>
-                    <input type="radio" id="AboveALvl" name="highest_education" value="AboveA">
+                    <input type="radio" id="AboveALvl" name="highest_education" value="A Level or Equivalent">
                     <label for="AboveALvl">A Level or Equivalent</label><br>
-                    <input type="radio" id="BelowALvl" name="highest_education" value="BelowA">
+                    <input type="radio" id="BelowALvl" name="highest_education" value="Lower Than A Level">
                     <label for="BelowALvl">Lower Than A Level</label><br>
-                    <input type="radio" id="PostGrad" name="highest_education" value="PostGQual">
+                    <input type="radio" id="PostGrad" name="highest_education" value="Post Graduate Qualification">
                     <label for="PostGrad">Post Graduate Qualification</label><br>
-                    <input type="radio" id="NoQual" name="highest_education" value="NoFQual">
+                    <input type="radio" id="NoQual" name="highest_education" value="No Formal quals">
                     <label for="NoQual">No Formal quals</label><br>
 
                     <p>IMD Band:</p>
                     <select name="imd_band">
-                      <option value="0-10%">0-10%</option>
-                      <option value="10-20%">10-20%</option>
-                      <option value="20-30%">20-30%</option>
-                      <option value="30-40%">30-40%</option>
-                      <option value="40-50%">40-50%</option>
-                      <option value="50-60%">50-60%</option>
-                      <option value="60-70%">60-70%</option>
-                      <option value="70-80%">70-80%</option>
-                      <option value="80-90%">80-90%</option>
-                      <option value="90-100%">90-100%</option>
-                      <option value="NULL">Unknown</option>
+                        <option value="0-10%">0-10%</option>
+                        <option value="10-20%">10-20%</option>
+                        <option value="20-30%">20-30%</option>
+                        <option value="30-40%">30-40%</option>
+                        <option value="40-50%">40-50%</option>
+                        <option value="50-60%">50-60%</option>
+                        <option value="60-70%">60-70%</option>
+                        <option value="70-80%">70-80%</option>
+                        <option value="80-90%">80-90%</option>
+                        <option value="90-100%">90-100%</option>
+                        <option value="">Unknown</option>
                     </select>
 
                     <p>Age:</p>
-                    <input type="radio" id="under35" name="age_band" value="under35">
+                    <input type="radio" id="under35" name="age_band" value="0-35">
                     <label for="under35">0-35</label><br>
-                    <input type="radio" id="35to55" name="age_band" value="35to55">
+                    <input type="radio" id="35to55" name="age_band" value="35-55">
                     <label for="35to55">35-55</label><br>
-                    <input type="radio" id="over55" name="age_band" value="over55">
-                    <label for="over55">55<=</label><br>
+                    <input type="radio" id="over55" name="age_band" value="55<=">
+                    <label for="over55">55&lt;=</label><br>
 
                     <br>
 
@@ -268,85 +288,89 @@
                     <label for="no">N</label><br>
 
                     <p>Final Result:</p>
-                    <input type="radio" id="pass" name="final_result" value="P">
+                    <input type="radio" id="pass" name="final_result" value="Pass">
                     <label for="pass">Pass</label><br>
-                    <input type="radio" id="withdrawn" name="final_result" value="W">
+                    <input type="radio" id="withdrawn" name="final_result" value="Withdrawn">
                     <label for="withdrawn">Withdrawn</label><br>
-                    <input type="radio" id="fail" name="final_result" value="F">
+                    <input type="radio" id="fail" name="final_result" value="Fail">
                     <label for="fail">Fail</label><br>
-                    <input type="radio" id="distinction" name="final_result" value="D">
+                    <input type="radio" id="distinction" name="final_result" value="Distinction">
                     <label for="distinction">Distinction</label>
 
-                    <!-- STUDENT MODULE REGISTRATION INFO -->
-                    
                     <p>Code Module:</p>
-                    <input type="radio" id="aaa" name="code_module" value="A">
-                    <label for="aaa">AAA</label><br>
-                    <input type="radio" id="bbb" name="code_module" value="B">
-                    <label for="bbb">BBB</label><br>
-                    <input type="radio" id="ccc" name="code_module" value="C">
-                    <label for="ccc">CCC</label><br>
-                    <input type="radio" id="ddd" name="code_module" value="D">
-                    <label for="ddd">DDD</label><br>
-                    <input type="radio" id="eee" name="code_module" value="E">
-                    <label for="eee">EEE</label><br>
-                    <input type="radio" id="fff" name="code_module" value="F">
-                    <label for="fff">FFF</label><br>
-                    <input type="radio" id="ggg" name="code_module" value="G">
-                    <label for="ggg">GGG</label>
+                    <input type="radio" id="AAA" name="code_module" value="AAA">
+                    <label for="AAA">AAA</label><br>
+                    <input type="radio" id="BBB" name="code_module" value="BBB">
+                    <label for="BBB">BBB</label><br>
+                    <input type="radio" id="CCC" name="code_module" value="CCC">
+                    <label for="CCC">CCC</label><br>
+                    <input type="radio" id="DDD" name="code_module" value="DDD">
+                    <label for="DDD">DDD</label><br>
+                    <input type="radio" id="EEE" name="code_module" value="EEE">
+                    <label for="EEE">EEE</label><br>
+                    <input type="radio" id="FFF" name="code_module" value="FFF">
+                    <label for="FFF">FFF</label><br>
+                    <input type="radio" id="GGG" name="code_module" value="GGG">
+                    <label for="GGG">GGG</label>
 
                     <p>Code Presentation:</p>
-                    <input type="radio" id="2013B" name="code_presentation" value="3B">
+                    <input type="radio" id="2013B" name="code_presentation" value="2013B">
                     <label for="2013B">2013B</label><br>
-                    <input type="radio" id="2013J" name="code_presentation" value="3J">
+                    <input type="radio" id="2013J" name="code_presentation" value="2013J">
                     <label for="2013J">2013J</label><br>
-                    <input type="radio" id="2014B" name="code_presentation" value="4B">
+                    <input type="radio" id="2014B" name="code_presentation" value="2014B">
                     <label for="2014B">2014B</label><br>
-                    <input type="radio" id="2014J" name="code_presentation" value="4J">
+                    <input type="radio" id="2014J" name="code_presentation" value="2014J">
                     <label for="2014J">2014J</label><br>
 
                     <br>
 
-                    <label for="registeredDays">Registered Days:</label>
-                    <input type="text" id="registeredDays" name="date_registration"><br>
+                    <label for="date_registration">Registered Days:</label>
+                    <input type="text" id="date_registration" name="date_registration"><br>
 
                     <br>
 
-                    <label for="unregisteredDays">Unregistered Days:</label>
-                    <input type="text" id="unregisteredDays" name="date_unregistration"><br>
+                    <label for="date_unregistration">Unregistered Days:</label>
+                    <input type="text" id="date_unregistration" name="date_unregistration"><br>
 
                     <br>
 
-                    <!-- STUDENT ASSESSMENT INFO -->
-
-                    <label for="assessmentID">Assessment ID:</label>
+                    <label for="id_assessment">Assessment ID:</label>
                     <input type="text" id="id_assessment" name="id_assessment"><br>
-                        
+
                     <br>
-                    
-                    <label for="submissionDate">Date submitted:</label>
+
+                    <label for="date_submitted">Date Submitted:</label>
                     <input type="text" id="date_submitted" name="date_submitted"><br>
 
-                     <br>
+                    <br>
+
+                    <label for="is_banked">Assessment Banked Result:</label>
+                    <input type="text" id="is_banked" name="is_banked"><br>
+
+                    <br>
 
                     <label for="score">Assessment Score:</label>
                     <input type="text" id="score" name="score"><br>
 
                     <button type="submit">Submit User Input</button><br>
                 </form>
-                
             </div>
         </div>
     </div>
-    
-    
+
     <footer>
         <p>&copy; 2024 OULAD Student Engagement Analytics. All rights reserved.</p>
     </footer>
-<script>
-    // our js code
-    
 
-</script>
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-box">
+            <h3>Submission Status</h3>
+            <p id="popupMessage"></p>
+            <button type="button" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
